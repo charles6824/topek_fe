@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: 'Montserrat', sans-serif;
+  --font-mono-num: 'Space Grotesk', monospace;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* Grounded Organic Palette */
+  --color-topek-red: #c1121f;
+  --color-topek-red-dark: #9b0d18;
+  --color-topek-iron: #141518;
+  --color-topek-steel: #23252a;
+  --color-topek-concrete: #f5f4f0;
+  --color-topek-paper: #faf9f6;
+  --color-topek-sand: #e7e5df;
+  --color-topek-earth: #c27803;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--color-topek-paper);
+  color: var(--color-topek-iron);
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #faf9f6;
+  color: #1a1c20;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-heading);
+  letter-spacing: -0.025em;
+}
+
+.font-num {
+  font-family: var(--font-mono-num);
+}
+
+/* Subtle organic grain for paper/concrete depth */
+.bg-paper {
+  background-color: #faf9f6;
+}
+
+.bg-concrete {
+  background-color: #f3f2ee;
+}
+
+.border-architectural {
+  border-color: #e5e4de;
+}
+
+/* Custom architectural animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
