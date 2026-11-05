@@ -59,7 +59,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
       {/* Mobile Top Header */}
       <div className="md:hidden bg-slate-900 border-b border-slate-800 p-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-[#d62828] flex items-center justify-center shadow">
+          <div className="w-8 h-8 rounded-lg bg-[#c1121f] flex items-center justify-center shadow">
             <HardHat size={18} weight="fill" className="text-white" />
           </div>
           <div>
@@ -85,7 +85,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
         <div className="space-y-6">
           {/* Brand Emblem */}
           <div className="flex items-center gap-3 pb-5 border-b border-slate-800">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#d62828] to-[#991b1b] flex items-center justify-center shadow-lg">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#c1121f] to-[#7f1d1d] flex items-center justify-center shadow-lg">
               <HardHat size={22} weight="fill" className="text-white" />
             </div>
             <div>
@@ -126,7 +126,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
                   onClick={() => setSidebarOpen(false)}
                   className={`flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-bold tracking-wide transition-all ${
                     active
-                      ? 'bg-[#d62828] text-white shadow-md'
+                      ? 'bg-[#c1121f] text-white shadow-md'
                       : 'text-slate-400 hover:text-white hover:bg-slate-800/70'
                   }`}
                 >

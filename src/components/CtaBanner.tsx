@@ -31,17 +31,17 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ onContactClick }) => {
           <div className="flex flex-wrap items-center gap-3.5 shrink-0">
             <button
               onClick={onContactClick}
-              className="inline-flex items-center gap-2 bg-[#141518] hover:bg-white hover:text-[#141518] text-white px-7 sm:px-8 py-3.5 sm:py-4 rounded-xs text-xs sm:text-sm font-bold uppercase tracking-widest transition-colors shadow-sm cursor-pointer"
+              className="group/btn inline-flex items-center gap-2 bg-[#141518] hover:bg-white hover:text-[#141518] text-white px-7 sm:px-8 py-3.5 sm:py-4 rounded-xs text-xs sm:text-sm font-bold uppercase tracking-widest transition-all duration-300 shadow-sm cursor-pointer"
             >
               <span>Submit Project RFQ</span>
-              <ArrowRight size={15} weight="bold" />
+              <ArrowRight size={15} weight="bold" className="transform group-hover/btn:translate-x-1.5 transition-transform duration-200" />
             </button>
 
             <a
               href={`tel:${COMPANY_INFO.phone}`}
-              className="inline-flex items-center gap-2 bg-transparent hover:bg-white/10 text-white px-6 sm:px-7 py-3.5 sm:py-4 rounded-xs text-xs sm:text-sm font-bold uppercase tracking-widest transition-colors border border-white/40"
+              className="group/call inline-flex items-center gap-2 bg-transparent hover:bg-white/10 text-white px-6 sm:px-7 py-3.5 sm:py-4 rounded-xs text-xs sm:text-sm font-bold uppercase tracking-widest transition-all duration-300 border border-white/40"
             >
-              <PhoneCall size={16} weight="bold" />
+              <PhoneCall size={16} weight="bold" className="group-hover/call:scale-115 group-hover/call:rotate-12 transition-transform duration-200" />
               <span>{COMPANY_INFO.phoneDisplay}</span>
             </a>
           </div>

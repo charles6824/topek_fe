@@ -20,7 +20,7 @@ export const MapSection: React.FC = () => {
       {/* Architectural Head Office Card Overlay */}
       <div className="absolute top-4 left-4 sm:top-6 sm:left-6 bg-[#141518]/95 backdrop-blur-md p-4 sm:p-5 rounded-xs shadow-xl border border-[#2e3138] max-w-[280px] sm:max-w-sm hidden sm:block text-white">
         <div className="flex items-start gap-3">
-          <div className="w-8 h-8 rounded-xs bg-[#c1121f] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-2xs">
+          <div className="w-8 h-8 rounded-xs bg-[#c1121f] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-2xs hover:scale-110 hover:shadow-[0_0_12px_rgba(193,18,31,0.6)] transition-all duration-300 cursor-pointer">
             <MapPin size={16} weight="fill" />
           </div>
           <div>

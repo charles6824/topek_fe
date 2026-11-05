@@ -130,17 +130,17 @@ export const Footer: React.FC = () => {
               Contact & RFQ
             </h3>
             <div className="space-y-3 text-xs text-[#a1a1aa]">
-              <div className="flex items-start gap-2.5">
-                <MapPin size={16} weight="fill" className="text-[#c1121f] shrink-0 mt-0.5" />
+              <div className="group/contact flex items-start gap-2.5 transition-colors">
+                <MapPin size={16} weight="fill" className="text-[#c1121f] shrink-0 mt-0.5 group-hover/contact:scale-120 transition-transform duration-200" />
                 <span>
                   <strong className="text-white">Head Office:</strong>
                   <br />
-                  {COMPANY_INFO.address}
+                  <span className="group-hover/contact:text-[#d4d4d8] transition-colors">{COMPANY_INFO.address}</span>
                 </span>
               </div>
 
-              <div className="flex items-center gap-2.5">
-                <Phone size={16} weight="fill" className="text-[#c1121f] shrink-0" />
+              <div className="group/contact flex items-center gap-2.5">
+                <Phone size={16} weight="fill" className="text-[#c1121f] shrink-0 group-hover/contact:scale-120 group-hover/contact:rotate-12 transition-transform duration-200" />
                 <span>
                   <strong className="text-white">Direct Line:</strong>{' '}
                   <a href={`tel:${COMPANY_INFO.phone}`} className="text-white hover:text-[#c1121f] transition-colors font-medium">
@@ -149,8 +149,8 @@ export const Footer: React.FC = () => {
                 </span>
               </div>
 
-              <div className="flex items-center gap-2.5">
-                <EnvelopeSimple size={16} weight="fill" className="text-[#c1121f] shrink-0" />
+              <div className="group/contact flex items-center gap-2.5">
+                <EnvelopeSimple size={16} weight="fill" className="text-[#c1121f] shrink-0 group-hover/contact:scale-120 transition-transform duration-200" />
                 <span className="truncate">
                   <strong className="text-white">Email:</strong>{' '}
                   <a href={`mailto:${COMPANY_INFO.email}`} className="hover:text-white transition-colors">
@@ -159,11 +159,11 @@ export const Footer: React.FC = () => {
                 </span>
               </div>
 
-              <div className="flex items-center gap-2.5">
-                <Globe size={16} weight="fill" className="text-[#c1121f] shrink-0" />
+              <div className="group/contact flex items-center gap-2.5">
+                <Globe size={16} weight="fill" className="text-[#c1121f] shrink-0 group-hover/contact:scale-120 transition-transform duration-200" />
                 <span>
                   <strong className="text-white">Web:</strong>{' '}
-                  <span className="text-[#a1a1aa]">{COMPANY_INFO.website}</span>
+                  <span className="text-[#a1a1aa] group-hover/contact:text-white transition-colors">{COMPANY_INFO.website}</span>
                 </span>
               </div>
 

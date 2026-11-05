@@ -193,7 +193,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
                   <div>
                     <h3
                       onClick={() => onProjectSelect(project)}
-                      className="text-base font-bold text-[#1b2a4a] group-hover:text-[#d62828] transition-colors leading-snug cursor-pointer font-montserrat line-clamp-2"
+                      className="text-base font-bold text-[#1b2a4a] group-hover:text-[#c1121f] transition-colors leading-snug cursor-pointer font-montserrat line-clamp-2"
                     >
                       {project.title}
                     </h3>
@@ -208,7 +208,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
                   <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
                     <button
                       onClick={() => onProjectSelect(project)}
-                      className="font-bold text-[#1b2a4a] hover:text-[#d62828] uppercase tracking-wider inline-flex items-center gap-1 cursor-pointer"
+                      className="font-bold text-[#1b2a4a] hover:text-[#c1121f] uppercase tracking-wider inline-flex items-center gap-1 cursor-pointer"
                     >
                       <span>Project Details</span>
                       <ArrowRight size={13} weight="bold" />
@@ -216,7 +216,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
 
                     <button
                       onClick={() => onOpenContact(`Inquiry regarding project: ${project.title}`)}
-                      className="text-[#d62828] hover:underline font-bold"
+                      className="text-[#c1121f] hover:underline font-bold"
                     >
                       RFQ Similar
                     </button>

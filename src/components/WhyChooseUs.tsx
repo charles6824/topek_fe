@@ -24,12 +24,12 @@ export const WhyChooseUs: React.FC = () => {
             </div>
 
             {/* Benefit Box 1 */}
-            <div className="bg-white p-5 rounded-xs shadow-2xs border border-[#e5e4de] flex gap-4 transition-all hover:border-[#141518]">
-              <div className="w-12 h-12 rounded-xs bg-[#f5f4f0] text-[#c1121f] flex items-center justify-center shrink-0 border border-[#e5e4de]">
-                <Truck size={24} weight="bold" />
+            <div className="group bg-white p-5 rounded-xs shadow-2xs border border-[#e5e4de] flex gap-4 transition-all duration-300 hover:border-[#141518] hover:shadow-md cursor-pointer">
+              <div className="w-12 h-12 rounded-xs bg-[#f5f4f0] text-[#c1121f] group-hover:bg-[#c1121f] group-hover:text-white group-hover:border-[#c1121f] flex items-center justify-center shrink-0 border border-[#e5e4de] transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_6px_16px_rgba(193,18,31,0.35)]">
+                <Truck size={24} weight="duotone" className="transition-transform duration-300 group-hover:scale-105" />
               </div>
               <div>
-                <h3 className="text-sm sm:text-base font-bold text-[#141518] font-heading uppercase mb-1">
+                <h3 className="text-sm sm:text-base font-bold text-[#141518] group-hover:text-[#c1121f] transition-colors font-heading uppercase mb-1">
                   70+ Owned Heavy Equipment Fleet Units
                 </h3>
                 <p className="text-xs text-[#5f636e] leading-relaxed font-sans">
@@ -39,12 +39,12 @@ export const WhyChooseUs: React.FC = () => {
             </div>
 
             {/* Benefit Box 2 */}
-            <div className="bg-white p-5 rounded-xs shadow-2xs border border-[#e5e4de] flex gap-4 transition-all hover:border-[#141518]">
-              <div className="w-12 h-12 rounded-xs bg-[#f5f4f0] text-[#141518] flex items-center justify-center shrink-0 border border-[#e5e4de]">
-                <Certificate size={24} weight="bold" />
+            <div className="group bg-white p-5 rounded-xs shadow-2xs border border-[#e5e4de] flex gap-4 transition-all duration-300 hover:border-[#141518] hover:shadow-md cursor-pointer">
+              <div className="w-12 h-12 rounded-xs bg-[#f5f4f0] text-[#141518] group-hover:bg-[#c1121f] group-hover:text-white group-hover:border-[#c1121f] flex items-center justify-center shrink-0 border border-[#e5e4de] transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_6px_16px_rgba(193,18,31,0.35)]">
+                <Certificate size={24} weight="duotone" className="transition-transform duration-300 group-hover:scale-105" />
               </div>
               <div>
-                <h3 className="text-sm sm:text-base font-bold text-[#141518] font-heading uppercase mb-1">
+                <h3 className="text-sm sm:text-base font-bold text-[#141518] group-hover:text-[#c1121f] transition-colors font-heading uppercase mb-1">
                   COREN, NUPRC & ISO 9001 / 45001 Compliance
                 </h3>
                 <p className="text-xs text-[#5f636e] leading-relaxed font-sans">
@@ -61,9 +61,9 @@ export const WhyChooseUs: React.FC = () => {
                 'Certified In-Situ Slump & Cube Tests',
                 'Structured Milestone Valuations'
               ].map((item) => (
-                <div key={item} className="flex items-center gap-2 text-xs font-semibold text-[#141518] bg-white p-3 rounded-xs border border-[#e5e4de]">
-                  <CheckCircle size={15} weight="fill" className="text-[#c1121f] shrink-0" />
-                  <span>{item}</span>
+                <div key={item} className="group/check flex items-center gap-2 text-xs font-semibold text-[#141518] bg-white p-3 rounded-xs border border-[#e5e4de] hover:border-[#c1121f]/50 hover:bg-[#faf9f6] transition-all duration-200 cursor-default">
+                  <CheckCircle size={15} weight="fill" className="text-[#c1121f] shrink-0 group-hover/check:scale-125 transition-transform duration-200" />
+                  <span className="group-hover/check:text-[#c1121f] transition-colors duration-200">{item}</span>
                 </div>
               ))}
             </div>

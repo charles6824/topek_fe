@@ -46,7 +46,7 @@ export const AdminAuditPage: React.FC = () => {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search by action, email, IP..."
-              className="w-full text-xs pl-9 pr-4 py-2.5 rounded-xl border border-slate-800 bg-slate-900 text-white focus:outline-none focus:border-[#d62828]"
+              className="w-full text-xs pl-9 pr-4 py-2.5 rounded-xl border border-slate-800 bg-slate-900 text-white focus:outline-none focus:border-[#c1121f]"
             />
             <MagnifyingGlass size={16} className="absolute left-3 top-3 text-slate-500" />
           </div>

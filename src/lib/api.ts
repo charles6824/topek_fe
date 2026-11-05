@@ -21,11 +21,6 @@ async function apiRequest<T = any>(
     headers.set('Content-Type', 'application/json');
   }
 
-  // Retrieve stored token if available (as fallback to HttpOnly cookie)
-  const token = localStorage.getItem('topek_auth_token');
-  if (token && !headers.has('Authorization')) {
-    headers.set('Authorization', `Bearer ${token}`);
-  }
 
   try {
     const res = await fetch(url, {
@@ -88,22 +83,14 @@ export const api = {
 
   // Auth
   login: async (credentials: { email: string; password: string }) => {
-    const res = await apiRequest('/auth/login', {
+    return apiRequest('/auth/login', {
       method: 'POST',
       body: JSON.stringify(credentials),
     });
-    if (res.token) {
-      localStorage.setItem('topek_auth_token', res.token);
-    }
-    return res;
   },
 
   logout: async () => {
-    try {
-      await apiRequest('/auth/logout', { method: 'POST' });
-    } finally {
-      localStorage.removeItem('topek_auth_token');
-    }
+    return apiRequest('/auth/logout', { method: 'POST' });
   },
 
   getMe: () => apiRequest('/auth/me', { method: 'GET' }),

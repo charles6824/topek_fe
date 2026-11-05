@@ -18,6 +18,7 @@ export const AdminEquipmentPage: React.FC = () => {
   const [editingItem, setEditingItem] = useState<any | null>(null);
   const [deleteConfirmId, setDeleteConfirmId] = useState<string | null>(null);
   const [notification, setNotification] = useState<string | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -77,7 +78,8 @@ export const AdminEquipmentPage: React.FC = () => {
       loadEquipment();
       setTimeout(() => setNotification(null), 3000);
     } catch (err: any) {
-      alert(err.message || 'Error saving equipment');
+      setErrorMessage(err.message || 'Error saving equipment');
+      setTimeout(() => setErrorMessage(null), 4000);
     }
   };
 
@@ -89,7 +91,8 @@ export const AdminEquipmentPage: React.FC = () => {
       loadEquipment();
       setTimeout(() => setNotification(null), 3000);
     } catch (err: any) {
-      alert(err.message || 'Error deleting equipment');
+      setErrorMessage(err.message || 'Error deleting equipment');
+      setTimeout(() => setErrorMessage(null), 4000);
     }
   };
 
@@ -116,7 +119,7 @@ export const AdminEquipmentPage: React.FC = () => {
 
           <button
             onClick={openCreateModal}
-            className="inline-flex items-center gap-2 bg-[#d62828] hover:bg-[#b71c1c] text-white px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow cursor-pointer"
+            className="inline-flex items-center gap-2 bg-[#c1121f] hover:bg-[#a50e1a] text-white px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow cursor-pointer"
           >
             <Plus size={16} weight="bold" />
             <span>Add Machinery Unit</span>
@@ -125,8 +128,15 @@ export const AdminEquipmentPage: React.FC = () => {
 
         {notification && (
           <div className="p-3 bg-emerald-950/80 border border-emerald-800 rounded-xl flex items-center gap-2 text-xs text-emerald-200">
-            <CheckCircle size={18} weight="fill" className="text-emerald-400" />
+            <CheckCircle size={18} weight="fill" className="text-emerald-400 shrink-0" />
             <span>{notification}</span>
+          </div>
+        )}
+
+        {errorMessage && (
+          <div className="p-3 bg-red-950/80 border border-red-800 rounded-xl flex items-center gap-2 text-xs text-red-200">
+            <WarningCircle size={18} weight="fill" className="text-red-400 shrink-0" />
+            <span>{errorMessage}</span>
           </div>
         )}
 
@@ -138,7 +148,7 @@ export const AdminEquipmentPage: React.FC = () => {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Filter equipment by model, capacity..."
-              className="w-full text-xs pl-9 pr-4 py-2.5 rounded-xl border border-slate-800 bg-slate-900 text-white focus:outline-none focus:border-[#d62828]"
+              className="w-full text-xs pl-9 pr-4 py-2.5 rounded-xl border border-slate-800 bg-slate-900 text-white focus:outline-none focus:border-[#c1121f]"
             />
             <MagnifyingGlass size={16} className="absolute left-3 top-3 text-slate-500" />
           </div>
@@ -233,7 +243,7 @@ export const AdminEquipmentPage: React.FC = () => {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#d62828]"
+                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#c1121f]"
                     placeholder="e.g. CAT 330D Crawler Excavator"
                   />
                 </div>
@@ -246,7 +256,7 @@ export const AdminEquipmentPage: React.FC = () => {
                     <select
                       value={formData.category}
                       onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#d62828]"
+                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#c1121f]"
                     >
                       <option value="Earthmoving">Earthmoving</option>
                       <option value="Lifting & Cranes">Lifting & Cranes</option>
@@ -266,7 +276,7 @@ export const AdminEquipmentPage: React.FC = () => {
                       required
                       value={formData.quantity}
                       onChange={(e) => setFormData({ ...formData, quantity: e.target.value })}
-                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#d62828]"
+                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#c1121f]"
                       placeholder="e.g. 4 Units"
                     />
                   </div>
@@ -279,7 +289,7 @@ export const AdminEquipmentPage: React.FC = () => {
                   <select
                     value={formData.status}
                     onChange={(e) => setFormData({ ...formData, status: e.target.value })}
-                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#d62828]"
+                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#c1121f]"
                   >
                     <option value="Operational">Operational (Ready to Mobilize)</option>
                     <option value="Mobilized">Mobilized (Active on Site)</option>
@@ -296,7 +306,7 @@ export const AdminEquipmentPage: React.FC = () => {
                     required
                     value={formData.specifications}
                     onChange={(e) => setFormData({ ...formData, specifications: e.target.value })}
-                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#d62828] resize-none"
+                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#c1121f] resize-none"
                     placeholder="Horsepower, bucket capacity, boom reach, hydraulic attachments..."
                   ></textarea>
                 </div>
@@ -311,7 +321,7 @@ export const AdminEquipmentPage: React.FC = () => {
                   </button>
                   <button
                     type="submit"
-                    className="bg-[#d62828] hover:bg-[#b71c1c] text-white px-6 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow"
+                    className="bg-[#c1121f] hover:bg-[#a50e1a] text-white px-6 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow cursor-pointer"
                   >
                     Save Equipment
                   </button>

@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --font-heading: 'Montserrat', sans-serif;
-  --font-mono-num: 'Space Grotesk', monospace;
-  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-montserrat: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono-num: 'Inter', monospace;
   
   /* Grounded Organic Palette */
   --color-topek-red: #c1121f;
@@ -23,6 +24,8 @@ html {
   color: var(--color-topek-iron);
   width: 100%;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -31,6 +34,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  font-family: var(--font-sans);
   background-color: #faf9f6;
   color: #1a1c20;
 }
@@ -45,6 +49,10 @@ body {
 h1, h2, h3, h4, h5, h6, .font-heading {
   font-family: var(--font-heading);
   letter-spacing: -0.025em;
+}
+
+.font-montserrat {
+  font-family: var(--font-heading) !important;
 }
 
 .font-num {

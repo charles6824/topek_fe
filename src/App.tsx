@@ -85,7 +85,7 @@ function MainApp() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-slate-800 font-sans selection:bg-[#d62828] selection:text-white">
+    <div className="min-h-screen flex flex-col bg-white text-slate-800 font-sans selection:bg-[#c1121f] selection:text-white">
       <ScrollToTopOnNav />
 
       {/* Render Public TopBar and Navbar only for non-admin routes */}

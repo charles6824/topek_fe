@@ -5,7 +5,8 @@ import {
   CheckCircle,
   Trash,
   X,
-  User
+  User,
+  WarningCircle
 } from '@phosphor-icons/react';
 
 export const AdminLeadsPage: React.FC = () => {
@@ -15,6 +16,8 @@ export const AdminLeadsPage: React.FC = () => {
   const [internalNotes, setInternalNotes] = useState('');
   const [leadStatus, setLeadStatus] = useState('New');
   const [notification, setNotification] = useState<string | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [deleteTargetId, setDeleteTargetId] = useState<string | null>(null);
 
   const loadLeads = () => {
     const filter = statusFilter === 'All' ? undefined : statusFilter;
@@ -42,25 +45,28 @@ export const AdminLeadsPage: React.FC = () => {
         status: leadStatus,
         notes: internalNotes,
       });
-      setNotification('Lead status & notes updated');
+      setNotification('Lead status & notes updated successfully');
       setSelectedLead(null);
       loadLeads();
       setTimeout(() => setNotification(null), 3000);
     } catch (err: any) {
-      alert(err.message || 'Error updating lead');
+      setErrorMessage(err.message || 'Error updating lead');
+      setTimeout(() => setErrorMessage(null), 4000);
     }
   };
 
-  const handleDeleteLead = async (id: string) => {
-    if (!confirm('Are you sure you want to delete this client inquiry?')) return;
+  const confirmDeleteLead = async () => {
+    if (!deleteTargetId) return;
     try {
-      await api.deleteLead(id);
-      setNotification('Lead deleted');
-      if (selectedLead && selectedLead._id === id) setSelectedLead(null);
+      await api.deleteLead(deleteTargetId);
+      setNotification('Lead deleted successfully');
+      if (selectedLead && selectedLead._id === deleteTargetId) setSelectedLead(null);
+      setDeleteTargetId(null);
       loadLeads();
       setTimeout(() => setNotification(null), 3000);
     } catch (err: any) {
-      alert(err.message || 'Error deleting lead');
+      setErrorMessage(err.message || 'Error deleting lead');
+      setTimeout(() => setErrorMessage(null), 4000);
     }
   };
 
@@ -86,7 +92,7 @@ export const AdminLeadsPage: React.FC = () => {
                 onClick={() => setStatusFilter(st)}
                 className={`px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
                   statusFilter === st
-                    ? 'bg-[#d62828] text-white shadow-sm'
+                    ? 'bg-[#c1121f] text-white shadow-sm'
                     : 'text-slate-400 hover:text-white'
                 }`}
               >
@@ -98,8 +104,15 @@ export const AdminLeadsPage: React.FC = () => {
 
         {notification && (
           <div className="p-3 bg-emerald-950/80 border border-emerald-800 rounded-xl flex items-center gap-2 text-xs text-emerald-200">
-            <CheckCircle size={18} weight="fill" className="text-emerald-400" />
+            <CheckCircle size={18} weight="fill" className="text-emerald-400 shrink-0" />
             <span>{notification}</span>
+          </div>
+        )}
+
+        {errorMessage && (
+          <div className="p-3 bg-red-950/80 border border-red-800 rounded-xl flex items-center gap-2 text-xs text-red-200">
+            <WarningCircle size={18} weight="fill" className="text-red-400 shrink-0" />
+            <span>{errorMessage}</span>
           </div>
         )}
 
@@ -163,7 +176,7 @@ export const AdminLeadsPage: React.FC = () => {
                       </td>
                       <td className="p-4 text-right" onClick={(e) => e.stopPropagation()}>
                         <button
-                          onClick={() => handleDeleteLead(lead._id)}
+                          onClick={() => setDeleteTargetId(lead._id)}
                           className="p-1.5 rounded-lg bg-red-950/60 hover:bg-red-900 text-red-300 transition-colors cursor-pointer"
                           title="Delete Lead"
                         >
@@ -249,7 +262,7 @@ export const AdminLeadsPage: React.FC = () => {
                     <select
                       value={leadStatus}
                       onChange={(e) => setLeadStatus(e.target.value)}
-                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#d62828]"
+                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#c1121f]"
                     >
                       <option value="New">New (Unaddressed)</option>
                       <option value="In-Review">In-Review (Estimating Team Analyzing)</option>
@@ -267,7 +280,7 @@ export const AdminLeadsPage: React.FC = () => {
                       value={internalNotes}
                       onChange={(e) => setInternalNotes(e.target.value)}
                       placeholder="e.g. Sent BOQ template, site inspection scheduled for Thursday in Ikeja..."
-                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#d62828] resize-none"
+                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#c1121f] resize-none"
                     ></textarea>
                   </div>
                 </div>
@@ -283,11 +296,47 @@ export const AdminLeadsPage: React.FC = () => {
                   <button
                     type="button"
                     onClick={handleUpdateStatus}
-                    className="bg-[#d62828] hover:bg-[#b71c1c] text-white px-6 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow"
+                    className="bg-[#c1121f] hover:bg-[#a50e1a] text-white px-6 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow cursor-pointer"
                   >
                     Save Status & Notes
                   </button>
                 </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Delete Confirmation Modal */}
+        {deleteTargetId && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm">
+            <div className="bg-slate-900 border border-slate-800 rounded-2xl w-full max-w-sm p-6 shadow-2xl space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-red-950/60 border border-red-800/60 flex items-center justify-center text-red-400">
+                  <WarningCircle size={22} weight="fill" />
+                </div>
+                <div>
+                  <h4 className="text-sm font-bold text-white uppercase tracking-tight">Delete Lead</h4>
+                  <p className="text-xs text-slate-400">This action cannot be undone.</p>
+                </div>
+              </div>
+              <p className="text-xs text-slate-300">
+                Are you sure you want to permanently delete this client inquiry?
+              </p>
+              <div className="flex justify-end gap-2 pt-2">
+                <button
+                  type="button"
+                  onClick={() => setDeleteTargetId(null)}
+                  className="px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider text-slate-400 hover:text-white cursor-pointer"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="button"
+                  onClick={confirmDeleteLead}
+                  className="bg-red-700 hover:bg-red-800 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
+                >
+                  Confirm Delete
+                </button>
               </div>
             </div>
           </div>

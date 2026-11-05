@@ -29,10 +29,10 @@ export const ThreePillars: React.FC = () => {
               <div className="pt-6 relative z-10">
                 <Link
                   to="/services"
-                  className="inline-flex items-center gap-2 border border-white/50 text-white hover:bg-white hover:text-[#141518] px-4.5 py-2.5 rounded-xs text-xs font-bold uppercase tracking-widest transition-colors"
+                  className="group/btn inline-flex items-center gap-2 border border-white/50 text-white hover:bg-white hover:text-[#141518] px-4.5 py-2.5 rounded-xs text-xs font-bold uppercase tracking-widest transition-all duration-300"
                 >
                   <span>Explore Division</span>
-                  <ArrowRight size={13} weight="bold" />
+                  <ArrowRight size={13} weight="bold" className="transform group-hover/btn:translate-x-1.5 transition-transform duration-200" />
                 </Link>
               </div>
 

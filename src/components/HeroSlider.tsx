@@ -83,10 +83,10 @@ export const HeroSlider: React.FC = () => {
                   <div className="flex flex-wrap items-center gap-3.5">
                     <Link
                       to={slide.ctaPath}
-                      className="inline-flex items-center gap-2 bg-[#c1121f] hover:bg-[#9e0e1a] text-white font-bold text-xs sm:text-sm tracking-wider uppercase px-6 sm:px-7 py-3.5 rounded-md shadow-lg transition-all duration-200"
+                      className="group/btn inline-flex items-center gap-2 bg-[#c1121f] hover:bg-[#9e0e1a] text-white font-bold text-xs sm:text-sm tracking-wider uppercase px-6 sm:px-7 py-3.5 rounded-md shadow-lg transition-all duration-200"
                     >
                       <span>{slide.ctaText}</span>
-                      <ArrowRight size={15} weight="bold" />
+                      <ArrowRight size={15} weight="bold" className="transform group-hover/btn:translate-x-1.5 transition-transform duration-200" />
                     </Link>
 
                     <Link
@@ -104,14 +104,14 @@ export const HeroSlider: React.FC = () => {
                     to="/services#construction-civil-engineering"
                     className="flex items-center gap-3.5 pb-4 border-b border-white/10 text-white group/item hover:translate-x-1 transition-transform"
                   >
-                    <div className="w-10 h-10 rounded-xs flex items-center justify-center text-white shrink-0">
-                      <HardHat size={28} weight="regular" />
+                    <div className="w-10 h-10 rounded-xs bg-white/10 border border-white/15 flex items-center justify-center text-white shrink-0 group-hover/item:bg-[#c1121f] group-hover/item:border-[#c1121f] group-hover/item:scale-110 group-hover/item:shadow-[0_0_15px_rgba(193,18,31,0.5)] transition-all duration-300">
+                      <HardHat size={22} weight="duotone" className="transition-transform duration-300 group-hover/item:scale-110" />
                     </div>
                     <div className="text-left">
-                      <span className="text-xs font-bold uppercase tracking-wider text-white block">
+                      <span className="text-xs font-bold uppercase tracking-wider text-white block group-hover/item:text-[#c1121f] transition-colors">
                         CIVIL
                       </span>
-                      <span className="text-xs font-bold uppercase tracking-wider text-white block">
+                      <span className="text-xs font-bold uppercase tracking-wider text-white block group-hover/item:text-[#c1121f] transition-colors">
                         ENGINEERING
                       </span>
                     </div>
@@ -121,14 +121,14 @@ export const HeroSlider: React.FC = () => {
                     to="/services"
                     className="flex items-center gap-3.5 pb-4 border-b border-white/10 text-white group/item hover:translate-x-1 transition-transform"
                   >
-                    <div className="w-10 h-10 rounded-xs flex items-center justify-center text-white shrink-0">
-                      <Wrench size={28} weight="regular" />
+                    <div className="w-10 h-10 rounded-xs bg-white/10 border border-white/15 flex items-center justify-center text-white shrink-0 group-hover/item:bg-[#c1121f] group-hover/item:border-[#c1121f] group-hover/item:scale-110 group-hover/item:shadow-[0_0_15px_rgba(193,18,31,0.5)] transition-all duration-300">
+                      <Wrench size={22} weight="duotone" className="transition-transform duration-300 group-hover/item:scale-110" />
                     </div>
                     <div className="text-left">
-                      <span className="text-xs font-bold uppercase tracking-wider text-white block">
+                      <span className="text-xs font-bold uppercase tracking-wider text-white block group-hover/item:text-[#c1121f] transition-colors">
                         PIPELINE
                       </span>
-                      <span className="text-xs font-bold uppercase tracking-wider text-white block">
+                      <span className="text-xs font-bold uppercase tracking-wider text-white block group-hover/item:text-[#c1121f] transition-colors">
                         CONSTRUCTION
                       </span>
                     </div>
@@ -138,14 +138,14 @@ export const HeroSlider: React.FC = () => {
                     to="/services"
                     className="flex items-center gap-3.5 pb-4 border-b border-white/10 text-white group/item hover:translate-x-1 transition-transform"
                   >
-                    <div className="w-10 h-10 rounded-xs flex items-center justify-center text-white shrink-0">
-                      <GearSix size={28} weight="regular" />
+                    <div className="w-10 h-10 rounded-xs bg-white/10 border border-white/15 flex items-center justify-center text-white shrink-0 group-hover/item:bg-[#c1121f] group-hover/item:border-[#c1121f] group-hover/item:scale-110 group-hover/item:shadow-[0_0_15px_rgba(193,18,31,0.5)] transition-all duration-300">
+                      <GearSix size={22} weight="duotone" className="transition-transform duration-300 group-hover/item:scale-110" />
                     </div>
                     <div className="text-left">
-                      <span className="text-xs font-bold uppercase tracking-wider text-white block">
+                      <span className="text-xs font-bold uppercase tracking-wider text-white block group-hover/item:text-[#c1121f] transition-colors">
                         EPC
                       </span>
-                      <span className="text-xs font-bold uppercase tracking-wider text-white block">
+                      <span className="text-xs font-bold uppercase tracking-wider text-white block group-hover/item:text-[#c1121f] transition-colors">
                         SOLUTIONS
                       </span>
                     </div>
@@ -155,14 +155,14 @@ export const HeroSlider: React.FC = () => {
                     to="/hse-policy"
                     className="flex items-center gap-3.5 text-white group/item hover:translate-x-1 transition-transform"
                   >
-                    <div className="w-10 h-10 rounded-xs flex items-center justify-center text-white shrink-0">
-                      <ShieldCheck size={28} weight="regular" />
+                    <div className="w-10 h-10 rounded-xs bg-white/10 border border-white/15 flex items-center justify-center text-white shrink-0 group-hover/item:bg-[#c1121f] group-hover/item:border-[#c1121f] group-hover/item:scale-110 group-hover/item:shadow-[0_0_15px_rgba(193,18,31,0.5)] transition-all duration-300">
+                      <ShieldCheck size={22} weight="duotone" className="transition-transform duration-300 group-hover/item:scale-110" />
                     </div>
                     <div className="text-left">
-                      <span className="text-xs font-bold uppercase tracking-wider text-white block">
+                      <span className="text-xs font-bold uppercase tracking-wider text-white block group-hover/item:text-[#c1121f] transition-colors">
                         SAFETY &
                       </span>
-                      <span className="text-xs font-bold uppercase tracking-wider text-white block">
+                      <span className="text-xs font-bold uppercase tracking-wider text-white block group-hover/item:text-[#c1121f] transition-colors">
                         QUALITY FIRST
                       </span>
                     </div>

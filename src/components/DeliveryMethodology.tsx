@@ -52,17 +52,21 @@ export const DeliveryMethodology: React.FC = () => {
               <button
                 key={stage.step}
                 onClick={() => setActiveStage(idx)}
-                className={`p-3.5 rounded-xs border text-left transition-all cursor-pointer flex flex-col justify-between ${
+                className={`group p-3.5 rounded-xs border text-left transition-all duration-300 cursor-pointer flex flex-col justify-between ${
                   isSelected
                     ? 'bg-[#c1121f] border-[#c1121f] text-white shadow-md'
-                    : 'bg-[#1e2025] border-[#2e3138] text-[#a1a1aa] hover:border-[#4a4d56] hover:text-white'
+                    : 'bg-[#1e2025] border-[#2e3138] text-[#a1a1aa] hover:border-[#c1121f]/60 hover:text-white hover:bg-[#25282f]'
                 }`}
               >
                 <div className="flex items-center justify-between mb-2">
-                  <span className={`font-mono text-xs font-bold ${isSelected ? 'text-white' : 'text-[#c27803]'}`}>
+                  <span className={`font-mono text-xs font-bold ${isSelected ? 'text-white' : 'text-[#c27803] group-hover:text-amber-400'}`}>
                     STAGE 0{stage.step}
                   </span>
-                  <div className={`p-1 rounded-xs ${isSelected ? 'bg-white/20' : 'bg-[#141518]'}`}>
+                  <div className={`p-1.5 rounded-xs transition-all duration-300 ${
+                    isSelected
+                      ? 'bg-white/20 text-white scale-110'
+                      : 'bg-[#141518] text-[#a1a1aa] group-hover:bg-[#c1121f] group-hover:text-white group-hover:scale-110 group-hover:shadow-[0_0_12px_rgba(193,18,31,0.5)]'
+                  }`}>
                     {stageIcons[stage.icon] || <CheckCircle size={16} weight="fill" />}
                   </div>
                 </div>
@@ -104,8 +108,8 @@ export const DeliveryMethodology: React.FC = () => {
                 </h4>
                 <div className="space-y-2">
                   {current.deliverables.map((item, i) => (
-                    <div key={i} className="flex items-start gap-2.5 bg-[#141518] p-3 rounded-xs border border-[#2e3138] text-xs text-[#e5e4de]">
-                      <ShieldCheck size={16} weight="fill" className="text-[#c1121f] shrink-0 mt-0.5" />
+                    <div key={i} className="group/deliv flex items-start gap-2.5 bg-[#141518] hover:bg-[#191b21] p-3 rounded-xs border border-[#2e3138] hover:border-[#c1121f]/50 text-xs text-[#e5e4de] transition-colors duration-200">
+                      <ShieldCheck size={16} weight="fill" className="text-[#c1121f] shrink-0 mt-0.5 group-hover/deliv:scale-120 transition-transform duration-200" />
                       <span>{item}</span>
                     </div>
                   ))}
@@ -116,7 +120,7 @@ export const DeliveryMethodology: React.FC = () => {
             {/* Right Visual Badge / Stepper Controls */}
             <div className="lg:col-span-5 bg-[#141518] p-6 sm:p-8 rounded-xs border border-[#2e3138] text-left flex flex-col justify-between h-full space-y-6">
               <div className="space-y-3">
-                <div className="w-10 h-10 bg-[#1e2025] border border-[#2e3138] text-[#c1121f] rounded-xs flex items-center justify-center">
+                <div className="w-11 h-11 bg-[#1e2025] border border-[#2e3138] text-[#c1121f] hover:border-[#c1121f] hover:bg-[#c1121f] hover:text-white rounded-xs flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-[0_0_15px_rgba(193,18,31,0.4)] cursor-pointer">
                   {stageIcons[current.icon]}
                 </div>
                 <h4 className="text-sm font-bold text-white font-heading uppercase tracking-wide">
@@ -143,10 +147,10 @@ export const DeliveryMethodology: React.FC = () => {
                 <button
                   disabled={activeStage === DELIVERY_STAGES.length - 1}
                   onClick={() => setActiveStage((prev) => Math.min(DELIVERY_STAGES.length - 1, prev + 1))}
-                  className="px-4 py-2 rounded-xs text-xs font-bold uppercase tracking-wider bg-[#c1121f] hover:bg-[#9b0d18] disabled:opacity-40 transition-colors cursor-pointer flex items-center gap-1"
+                  className="group/btn px-4 py-2 rounded-xs text-xs font-bold uppercase tracking-wider bg-[#c1121f] hover:bg-[#9b0d18] disabled:opacity-40 transition-colors cursor-pointer flex items-center gap-1"
                 >
                   <span>Next Stage</span>
-                  <CaretRight size={14} weight="bold" />
+                  <CaretRight size={14} weight="bold" className="group-hover/btn:translate-x-1 transition-transform duration-200" />
                 </button>
               </div>
             </div>

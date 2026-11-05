@@ -30,7 +30,7 @@ export const CoreValues: React.FC = () => {
             >
               <div>
                 {/* Acrostic Letter Block */}
-                <div className="w-11 h-11 rounded-xs bg-[#141518] group-hover:bg-[#c1121f] text-white flex items-center justify-center font-black text-xl font-mono transition-colors shadow-2xs mb-4">
+                <div className="w-11 h-11 rounded-xs bg-[#141518] group-hover:bg-[#c1121f] text-white flex items-center justify-center font-black text-xl font-mono transition-all duration-300 shadow-2xs group-hover:scale-110 group-hover:shadow-[0_6px_16px_rgba(193,18,31,0.4)] mb-4">
                   {val.letter}
                 </div>
 

@@ -136,18 +136,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, onRequestInfo }) =
             <button
               onClick={onOpenSearch}
               aria-label="Search website"
-              className="p-2 text-[#1e293b] hover:text-[#c1121f] hover:bg-gray-100 rounded-md transition-colors ml-1 cursor-pointer"
+              className="group/search p-2 text-[#1e293b] hover:text-[#c1121f] hover:bg-gray-100 rounded-md transition-colors ml-1 cursor-pointer"
             >
-              <MagnifyingGlass size={19} weight="bold" />
+              <MagnifyingGlass size={19} weight="bold" className="group-hover/search:scale-115 transition-transform duration-200" />
             </button>
 
             {/* Primary Action Button (Refined Deep Crimson) */}
             <button
               onClick={onRequestInfo}
-              className="ml-2 flex items-center gap-2 bg-[#c1121f] hover:bg-[#141518] text-white text-[11px] xl:text-[12px] font-bold tracking-wider uppercase px-4.5 py-2.5 rounded-md shadow-xs transition-colors cursor-pointer whitespace-nowrap"
+              className="group/btn ml-2 flex items-center gap-2 bg-[#c1121f] hover:bg-[#141518] text-white text-[11px] xl:text-[12px] font-bold tracking-wider uppercase px-4.5 py-2.5 rounded-md shadow-xs transition-colors cursor-pointer whitespace-nowrap"
             >
               <span>REQUEST A QUOTE</span>
-              <ArrowRight size={14} weight="bold" />
+              <ArrowRight size={14} weight="bold" className="group-hover/btn:translate-x-1 transition-transform duration-200" />
             </button>
           </nav>
 

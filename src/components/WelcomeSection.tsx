@@ -47,10 +47,10 @@ export const WelcomeSection: React.FC<WelcomeSectionProps> = ({ onImageClick }) 
                 { title: '750,000+ Safe Hours', desc: 'Zero Lost Time Injury (LTI) Record' },
                 { title: '70+ Owned Heavy Machines', desc: 'CAT, Tadano, Komatsu & Howo Fleet' },
               ].map((item, idx) => (
-                <div key={idx} className="bg-white p-3.5 border border-[#e5e4de] rounded-xs shadow-2xs">
+                <div key={idx} className="group/cred bg-white p-3.5 border border-[#e5e4de] hover:border-[#c1121f]/60 rounded-xs shadow-2xs hover:shadow-xs transition-all duration-300">
                   <div className="flex items-center gap-2">
-                    <CheckSquare size={16} weight="fill" className="text-[#c1121f] shrink-0" />
-                    <span className="text-xs font-bold text-[#141518] uppercase tracking-wide font-heading">{item.title}</span>
+                    <CheckSquare size={16} weight="fill" className="text-[#c1121f] shrink-0 group-hover/cred:scale-125 transition-transform duration-200" />
+                    <span className="text-xs font-bold text-[#141518] group-hover/cred:text-[#c1121f] uppercase tracking-wide font-heading transition-colors duration-200">{item.title}</span>
                   </div>
                   <p className="text-[11px] text-[#71717a] mt-1 pl-6">{item.desc}</p>
                 </div>
@@ -61,10 +61,10 @@ export const WelcomeSection: React.FC<WelcomeSectionProps> = ({ onImageClick }) 
             <div className="pt-3 flex flex-wrap items-center gap-3.5">
               <Link
                 to="/who-we-are"
-                className="inline-flex items-center gap-2 bg-[#141518] hover:bg-[#c1121f] text-white px-7 py-3.5 rounded-xs text-xs font-bold uppercase tracking-widest transition-colors shadow-xs"
+                className="group/btn inline-flex items-center gap-2 bg-[#141518] hover:bg-[#c1121f] text-white px-7 py-3.5 rounded-xs text-xs font-bold uppercase tracking-widest transition-colors shadow-xs"
               >
                 <span>Corporate Overview</span>
-                <ArrowRight size={14} weight="bold" />
+                <ArrowRight size={14} weight="bold" className="transform group-hover/btn:translate-x-1.5 transition-transform duration-200" />
               </Link>
 
               <Link
@@ -111,7 +111,7 @@ export const WelcomeSection: React.FC<WelcomeSectionProps> = ({ onImageClick }) 
 
               {/* Hover Inspect Icon */}
               <div className="absolute inset-0 bg-[#141518]/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                <div className="w-12 h-12 bg-white text-[#141518] rounded-xs flex items-center justify-center shadow-lg">
+                <div className="w-12 h-12 bg-white text-[#141518] group-hover:bg-[#c1121f] group-hover:text-white rounded-xs flex items-center justify-center shadow-lg transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
                   <Eye size={22} weight="bold" />
                 </div>
               </div>

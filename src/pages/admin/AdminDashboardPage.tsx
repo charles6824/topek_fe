@@ -70,7 +70,7 @@ export const AdminDashboardPage: React.FC = () => {
           <div className="flex items-center gap-3">
             <Link
               to="/admin/projects"
-              className="inline-flex items-center gap-2 bg-[#d62828] hover:bg-[#b71c1c] text-white px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow"
+              className="inline-flex items-center gap-2 bg-[#c1121f] hover:bg-[#a50e1a] text-white px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow"
             >
               <Plus size={16} weight="bold" />
               <span>New Project</span>
@@ -92,7 +92,7 @@ export const AdminDashboardPage: React.FC = () => {
           <div className="bg-slate-900 border border-slate-800 p-5 rounded-2xl shadow-sm">
             <div className="flex items-center justify-between text-slate-400 mb-3">
               <span className="text-xs font-bold uppercase tracking-wider">Verified Projects</span>
-              <Buildings size={22} className="text-[#d62828]" />
+              <Buildings size={22} className="text-[#c1121f]" />
             </div>
             <div className="text-3xl font-black text-white font-montserrat">
               {stats.projectsCount}
@@ -160,7 +160,7 @@ export const AdminDashboardPage: React.FC = () => {
             </div>
             <Link
               to="/admin/leads"
-              className="text-xs font-bold text-[#d62828] hover:underline flex items-center gap-1"
+              className="text-xs font-bold text-[#c1121f] hover:underline flex items-center gap-1"
             >
               <span>View All Inquiries</span>
               <ArrowRight size={14} weight="bold" />

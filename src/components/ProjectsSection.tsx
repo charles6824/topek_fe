@@ -165,14 +165,14 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                     Client: {project.client}
                   </span>
                   <div className="flex items-center gap-1.5 text-[11px] text-[#d4d4d8] mt-0.5">
-                    <MapPin size={12} weight="fill" className="text-[#c1121f] shrink-0" />
+                    <MapPin size={12} weight="fill" className="text-[#c1121f] shrink-0 group-hover:scale-115 transition-transform duration-200" />
                     <span className="truncate">{project.location}</span>
                   </div>
                 </div>
 
                 {/* Hover Inspect Icon */}
                 <div className="absolute inset-0 bg-[#141518]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20">
-                  <div className="w-11 h-11 bg-white text-[#141518] rounded-xs flex items-center justify-center shadow-lg">
+                  <div className="w-11 h-11 bg-white text-[#141518] group-hover:bg-[#c1121f] group-hover:text-white rounded-xs flex items-center justify-center shadow-lg transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
                     <Eye size={20} weight="bold" />
                   </div>
                 </div>
@@ -202,7 +202,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                     className="inline-flex items-center gap-1 text-[#141518] group-hover:text-[#c1121f] font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer"
                   >
                     <span>Inspect</span>
-                    <CaretRight size={13} weight="bold" />
+                    <CaretRight size={13} weight="bold" className="transform group-hover:translate-x-1 transition-transform duration-200" />
                   </button>
                 </div>
               </div>
@@ -214,10 +214,10 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
           <div className="mt-12 text-center">
             <Link
               to="/projects"
-              className="inline-flex items-center gap-2 bg-[#141518] hover:bg-[#c1121f] text-white px-8 py-3.5 rounded-xs text-xs font-bold uppercase tracking-widest transition-colors shadow-xs"
+              className="group/btn inline-flex items-center gap-2 bg-[#141518] hover:bg-[#c1121f] text-white px-8 py-3.5 rounded-xs text-xs font-bold uppercase tracking-widest transition-colors shadow-xs"
             >
               <span>Explore All 11 Verified Projects</span>
-              <ArrowRight size={14} weight="bold" />
+              <ArrowRight size={14} weight="bold" className="transform group-hover/btn:translate-x-1.5 transition-transform duration-200" />
             </Link>
           </div>
         )}

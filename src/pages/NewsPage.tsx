@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { PageBanner } from '../components/layout/PageBanner';
 import { CtaBanner } from '../components/CtaBanner';
 import { NEWS_ARTICLES } from '../data/topekData';
@@ -11,6 +11,16 @@ interface NewsPageProps {
 
 export const NewsPage: React.FC<NewsPageProps> = ({ onOpenContact }) => {
   const [selectedArticle, setSelectedArticle] = useState<NewsItem | null>(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && selectedArticle) {
+        setSelectedArticle(null);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [selectedArticle]);
 
   return (
     <div className="bg-[#faf9f6]">

@@ -117,7 +117,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
               <div className="pt-2">
                 <button
                   onClick={handleReset}
-                  className="bg-[#d62828] text-white px-6 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider hover:bg-[#b71c1c] transition-colors shadow-md cursor-pointer"
+                  className="bg-[#c1121f] text-white px-6 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider hover:bg-[#a50e1a] transition-colors shadow-md cursor-pointer"
                 >
                   Close Window
                 </button>
@@ -127,7 +127,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
             <form onSubmit={handleSubmit} className="space-y-3.5">
               {errorMessage && (
                 <div className="p-3 bg-red-50 border border-red-200 rounded-xl flex items-center gap-2 text-xs text-red-700">
-                  <WarningCircle size={18} weight="fill" className="shrink-0 text-[#d62828]" />
+                  <WarningCircle size={18} weight="fill" className="shrink-0 text-[#c1121f]" />
                   <span>{errorMessage}</span>
                 </div>
               )}
@@ -143,7 +143,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                     placeholder="Engr. / Alhaji / Chief ..."
-                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-[#d62828] focus:ring-1 focus:ring-[#d62828]"
+                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-[#c1121f] focus:ring-1 focus:ring-[#c1121f]"
                   />
                 </div>
 
@@ -157,7 +157,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="client@corporate.com"
-                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-[#d62828] focus:ring-1 focus:ring-[#d62828]"
+                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-[#c1121f] focus:ring-1 focus:ring-[#c1121f]"
                   />
                 </div>
               </div>
@@ -173,7 +173,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     placeholder="+234 803 000 0000"
-                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-[#d62828] focus:ring-1 focus:ring-[#d62828]"
+                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-[#c1121f] focus:ring-1 focus:ring-[#c1121f]"
                   />
                 </div>
 
@@ -186,7 +186,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                     value={formData.organization}
                     onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
                     placeholder="Company or Government Agency"
-                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-[#d62828] focus:ring-1 focus:ring-[#d62828]"
+                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-[#c1121f] focus:ring-1 focus:ring-[#c1121f]"
                   />
                 </div>
               </div>
@@ -199,7 +199,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                   <select
                     value={formData.divisionInterest}
                     onChange={(e) => setFormData({ ...formData, divisionInterest: e.target.value })}
-                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-[#d62828] focus:ring-1 focus:ring-[#d62828] bg-white text-slate-800"
+                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-[#c1121f] focus:ring-1 focus:ring-[#c1121f] bg-white text-slate-800"
                   >
                     <option value="">-- Select Division --</option>
                     {DIVISIONS.map((d) => (
@@ -217,7 +217,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                   <select
                     value={formData.budget}
                     onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-[#d62828] focus:ring-1 focus:ring-[#d62828] bg-white text-slate-800"
+                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-[#c1121f] focus:ring-1 focus:ring-[#c1121f] bg-white text-slate-800"
                   >
                     <option value="">-- Select Scope Size --</option>
                     <option value="Under ₦50M">Under ₦50 Million</option>
@@ -238,7 +238,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="Provide project site location, timeline, and engineering specifications..."
-                  className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-[#d62828] focus:ring-1 focus:ring-[#d62828] resize-none"
+                  className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-[#c1121f] focus:ring-1 focus:ring-[#c1121f] resize-none"
                 ></textarea>
               </div>
 
@@ -253,7 +253,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                 <button
                   type="submit"
                   disabled={loading}
-                  className="inline-flex items-center gap-1.5 bg-[#d62828] hover:bg-[#b71c1c] text-white px-6 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow-md disabled:opacity-50 cursor-pointer"
+                  className="inline-flex items-center gap-1.5 bg-[#c1121f] hover:bg-[#a50e1a] text-white px-6 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow-md disabled:opacity-50 cursor-pointer"
                 >
                   {loading ? (
                     <span>Submitting to Database...</span>

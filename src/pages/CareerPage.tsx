@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { PageBanner } from '../components/layout/PageBanner';
 import { CtaBanner } from '../components/CtaBanner';
-import { MapPin, CheckCircle, PaperPlaneRight, GraduationCap, Briefcase } from '@phosphor-icons/react';
+import { MapPin, CheckCircle, PaperPlaneRight, GraduationCap, Briefcase, WarningCircle } from '@phosphor-icons/react';
+import { api } from '../lib/api';
 
 interface CareerPageProps {
   onOpenContact: (service?: string) => void;
@@ -9,6 +10,12 @@ interface CareerPageProps {
 
 export const CareerPage: React.FC<CareerPageProps> = ({ onOpenContact }) => {
   const [selectedRole, setSelectedRole] = useState('');
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [qualifications, setQualifications] = useState('');
+  const [submitting, setSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [appSubmitted, setAppSubmitted] = useState(false);
 
   const jobs = [
@@ -50,9 +57,30 @@ export const CareerPage: React.FC<CareerPageProps> = ({ onOpenContact }) => {
     }
   ];
 
-  const handleApply = (e: React.FormEvent) => {
+  const handleApply = async (e: React.FormEvent) => {
     e.preventDefault();
-    setAppSubmitted(true);
+    setSubmitting(true);
+    setErrorMessage(null);
+
+    try {
+      await api.submitLead({
+        fullName,
+        email,
+        phone,
+        organization: 'Career Applicant',
+        divisionInterest: selectedRole ? `Career: ${selectedRole}` : 'Career / Engineering Application',
+        message: qualifications,
+      });
+      setAppSubmitted(true);
+      setFullName('');
+      setEmail('');
+      setPhone('');
+      setQualifications('');
+    } catch (err: any) {
+      setErrorMessage(err.message || 'Failed to submit application. Please check your network and try again.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -229,6 +257,13 @@ export const CareerPage: React.FC<CareerPageProps> = ({ onOpenContact }) => {
               </div>
             ) : (
               <form onSubmit={handleApply} className="space-y-5">
+                {errorMessage && (
+                  <div className="p-3 bg-red-950/20 border border-red-500/30 rounded-xs flex items-center gap-2 text-xs text-red-700">
+                    <WarningCircle size={16} weight="fill" className="shrink-0 text-[#c1121f]" />
+                    <span>{errorMessage}</span>
+                  </div>
+                )}
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label className="block text-xs font-mono font-semibold text-[#141518] uppercase tracking-wider mb-2">
@@ -237,6 +272,8 @@ export const CareerPage: React.FC<CareerPageProps> = ({ onOpenContact }) => {
                     <input
                       type="text"
                       required
+                      value={fullName}
+                      onChange={(e) => setFullName(e.target.value)}
                       placeholder="e.g. Babatunde Adeyemi"
                       className="w-full text-xs px-4 py-3 rounded-xs border border-[#e5e4de] focus:outline-none focus:border-[#141518] bg-[#faf9f6]"
                     />
@@ -249,6 +286,8 @@ export const CareerPage: React.FC<CareerPageProps> = ({ onOpenContact }) => {
                     <input
                       type="email"
                       required
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       placeholder="adeyemi@example.com"
                       className="w-full text-xs px-4 py-3 rounded-xs border border-[#e5e4de] focus:outline-none focus:border-[#141518] bg-[#faf9f6]"
                     />
@@ -263,6 +302,8 @@ export const CareerPage: React.FC<CareerPageProps> = ({ onOpenContact }) => {
                     <input
                       type="tel"
                       required
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
                       placeholder="+234 803 000 0000"
                       className="w-full text-xs px-4 py-3 rounded-xs border border-[#e5e4de] focus:outline-none focus:border-[#141518] bg-[#faf9f6]"
                     />
@@ -290,6 +331,8 @@ export const CareerPage: React.FC<CareerPageProps> = ({ onOpenContact }) => {
                   <textarea
                     required
                     rows={4}
+                    value={qualifications}
+                    onChange={(e) => setQualifications(e.target.value)}
                     placeholder="Detail your engineering degree, COREN/NSE registration, ASNT/API certifications, and project experience..."
                     className="w-full text-xs px-4 py-3 rounded-xs border border-[#e5e4de] focus:outline-none focus:border-[#141518] bg-[#faf9f6] resize-none"
                   ></textarea>
@@ -298,9 +341,10 @@ export const CareerPage: React.FC<CareerPageProps> = ({ onOpenContact }) => {
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="inline-flex items-center gap-2 bg-[#c1121f] hover:bg-[#a50e1a] text-white px-8 py-3.5 rounded-xs text-xs font-bold uppercase tracking-wider font-heading transition-colors shadow-xs cursor-pointer"
+                    disabled={submitting}
+                    className="inline-flex items-center gap-2 bg-[#c1121f] hover:bg-[#a50e1a] disabled:opacity-60 disabled:cursor-not-allowed text-white px-8 py-3.5 rounded-xs text-xs font-bold uppercase tracking-wider font-heading transition-colors shadow-xs cursor-pointer"
                   >
-                    <span>Transmit Application</span>
+                    <span>{submitting ? 'Transmitting Credentials...' : 'Transmit Application'}</span>
                     <PaperPlaneRight size={14} weight="bold" />
                   </button>
                 </div>

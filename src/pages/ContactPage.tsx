@@ -232,7 +232,7 @@ export const ContactPage: React.FC = () => {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="+234 803 000 0000"
-                        className="w-full text-xs px-3.5 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-[#d62828] bg-white shadow-2xs"
+                        className="w-full text-xs px-3.5 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-[#c1121f] bg-white shadow-2xs"
                       />
                     </div>
 
@@ -245,7 +245,7 @@ export const ContactPage: React.FC = () => {
                         value={formData.organization}
                         onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
                         placeholder="Organization Name"
-                        className="w-full text-xs px-3.5 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-[#d62828] bg-white shadow-2xs"
+                        className="w-full text-xs px-3.5 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-[#c1121f] bg-white shadow-2xs"
                       />
                     </div>
                   </div>
@@ -258,7 +258,7 @@ export const ContactPage: React.FC = () => {
                       <select
                         value={formData.divisionInterest}
                         onChange={(e) => setFormData({ ...formData, divisionInterest: e.target.value })}
-                        className="w-full text-xs px-3.5 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-[#d62828] bg-white text-slate-700 shadow-2xs"
+                        className="w-full text-xs px-3.5 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-[#c1121f] bg-white text-slate-700 shadow-2xs"
                       >
                         <option value="">-- Select Division --</option>
                         {DIVISIONS.map((d) => (
@@ -276,7 +276,7 @@ export const ContactPage: React.FC = () => {
                       <select
                         value={formData.budget}
                         onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                        className="w-full text-xs px-3.5 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-[#d62828] bg-white text-slate-700 shadow-2xs"
+                        className="w-full text-xs px-3.5 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-[#c1121f] bg-white text-slate-700 shadow-2xs"
                       >
                         <option value="">-- Select Budget Range --</option>
                         <option value="Under ₦50M">Under ₦50 Million</option>
@@ -297,7 +297,7 @@ export const ContactPage: React.FC = () => {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Specify project site location, anticipated start date, technical drawings, or equipment needs..."
-                      className="w-full text-xs px-3.5 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-[#d62828] bg-white resize-none shadow-2xs"
+                      className="w-full text-xs px-3.5 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-[#c1121f] bg-white resize-none shadow-2xs"
                     ></textarea>
                   </div>
 
@@ -305,7 +305,7 @@ export const ContactPage: React.FC = () => {
                     <button
                       type="submit"
                       disabled={loading}
-                      className="inline-flex items-center gap-2 bg-[#d62828] hover:bg-[#b71c1c] text-white px-8 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow-md disabled:opacity-50 cursor-pointer"
+                      className="inline-flex items-center gap-2 bg-[#c1121f] hover:bg-[#a50e1a] text-white px-8 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow-md disabled:opacity-50 cursor-pointer"
                     >
                       {loading ? (
                         <span>Transmitting to Engineering Database...</span>

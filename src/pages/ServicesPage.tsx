@@ -14,18 +14,19 @@ import {
   ArrowRight,
   MagnifyingGlass,
   CheckCircle,
-  FileText
+  FileText,
+  X
 } from '@phosphor-icons/react';
 
 const iconMap: Record<string, React.ReactNode> = {
-  Buildings: <Buildings size={32} weight="duotone" className="text-[#d62828]" />,
-  Compass: <Compass size={32} weight="duotone" className="text-[#d62828]" />,
-  Users: <Users size={32} weight="duotone" className="text-[#d62828]" />,
-  HouseLine: <HouseLine size={32} weight="duotone" className="text-[#d62828]" />,
-  Armchair: <Armchair size={32} weight="duotone" className="text-[#d62828]" />,
-  Package: <Package size={32} weight="duotone" className="text-[#d62828]" />,
-  Plant: <Plant size={32} weight="duotone" className="text-[#d62828]" />,
-  Truck: <Truck size={32} weight="duotone" className="text-[#d62828]" />,
+  Buildings: <Buildings size={32} weight="duotone" className="text-[#c1121f]" />,
+  Compass: <Compass size={32} weight="duotone" className="text-[#c1121f]" />,
+  Users: <Users size={32} weight="duotone" className="text-[#c1121f]" />,
+  HouseLine: <HouseLine size={32} weight="duotone" className="text-[#c1121f]" />,
+  Armchair: <Armchair size={32} weight="duotone" className="text-[#c1121f]" />,
+  Package: <Package size={32} weight="duotone" className="text-[#c1121f]" />,
+  Plant: <Plant size={32} weight="duotone" className="text-[#c1121f]" />,
+  Truck: <Truck size={32} weight="duotone" className="text-[#c1121f]" />,
 };
 
 interface ServicesPageProps {
@@ -80,9 +81,19 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search divisions & capabilities..."
-                className="w-full text-xs pl-9 pr-4 py-3 rounded-xs border border-[#e5e4de] focus:outline-none focus:border-[#c1121f] bg-white shadow-2xs"
+                className="w-full text-xs pl-9 pr-9 py-3 rounded-xs border border-[#e5e4de] focus:outline-none focus:border-[#c1121f] bg-white shadow-2xs"
               />
               <MagnifyingGlass size={16} weight="bold" className="absolute left-3 top-3.5 text-[#8a8d98]" />
+              {search && (
+                <button
+                  type="button"
+                  onClick={() => setSearch('')}
+                  aria-label="Clear search"
+                  className="absolute right-3 top-3.5 text-[#8a8d98] hover:text-[#141518] transition-colors cursor-pointer"
+                >
+                  <X size={14} weight="bold" />
+                </button>
+              )}
             </div>
           </div>
 

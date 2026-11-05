@@ -18,6 +18,7 @@ export const AdminProjectsPage: React.FC = () => {
   const [editingProject, setEditingProject] = useState<any | null>(null);
   const [deleteConfirmId, setDeleteConfirmId] = useState<string | null>(null);
   const [notification, setNotification] = useState<string | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   // Form state
   const [formData, setFormData] = useState({
@@ -93,7 +94,8 @@ export const AdminProjectsPage: React.FC = () => {
       loadProjects();
       setTimeout(() => setNotification(null), 3000);
     } catch (err: any) {
-      alert(err.message || 'Error saving project');
+      setErrorMessage(err.message || 'Error saving project');
+      setTimeout(() => setErrorMessage(null), 4000);
     }
   };
 
@@ -105,7 +107,8 @@ export const AdminProjectsPage: React.FC = () => {
       loadProjects();
       setTimeout(() => setNotification(null), 3000);
     } catch (err: any) {
-      alert(err.message || 'Error deleting project');
+      setErrorMessage(err.message || 'Error deleting project');
+      setTimeout(() => setErrorMessage(null), 4000);
     }
   };
 
@@ -132,7 +135,7 @@ export const AdminProjectsPage: React.FC = () => {
 
           <button
             onClick={openCreateModal}
-            className="inline-flex items-center gap-2 bg-[#d62828] hover:bg-[#b71c1c] text-white px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow cursor-pointer"
+            className="inline-flex items-center gap-2 bg-[#c1121f] hover:bg-[#a50e1a] text-white px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow cursor-pointer"
           >
             <Plus size={16} weight="bold" />
             <span>Add New Project</span>
@@ -141,8 +144,15 @@ export const AdminProjectsPage: React.FC = () => {
 
         {notification && (
           <div className="p-3 bg-emerald-950/80 border border-emerald-800 rounded-xl flex items-center gap-2 text-xs text-emerald-200">
-            <CheckCircle size={18} weight="fill" className="text-emerald-400" />
+            <CheckCircle size={18} weight="fill" className="text-emerald-400 shrink-0" />
             <span>{notification}</span>
+          </div>
+        )}
+
+        {errorMessage && (
+          <div className="p-3 bg-red-950/80 border border-red-800 rounded-xl flex items-center gap-2 text-xs text-red-200">
+            <WarningCircle size={18} weight="fill" className="text-red-400 shrink-0" />
+            <span>{errorMessage}</span>
           </div>
         )}
 
@@ -154,7 +164,7 @@ export const AdminProjectsPage: React.FC = () => {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Filter by title, client, location..."
-              className="w-full text-xs pl-9 pr-4 py-2.5 rounded-xl border border-slate-800 bg-slate-900 text-white focus:outline-none focus:border-[#d62828]"
+              className="w-full text-xs pl-9 pr-4 py-2.5 rounded-xl border border-slate-800 bg-slate-900 text-white focus:outline-none focus:border-[#c1121f]"
             />
             <MagnifyingGlass size={16} className="absolute left-3 top-3 text-slate-500" />
           </div>
@@ -262,7 +272,7 @@ export const AdminProjectsPage: React.FC = () => {
                     required
                     value={formData.title}
                     onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#d62828]"
+                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#c1121f]"
                   />
                 </div>
 
@@ -276,7 +286,7 @@ export const AdminProjectsPage: React.FC = () => {
                       required
                       value={formData.client}
                       onChange={(e) => setFormData({ ...formData, client: e.target.value })}
-                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#d62828]"
+                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#c1121f]"
                       placeholder="e.g. NNPC/NGML or BUA Cement"
                     />
                   </div>
@@ -290,7 +300,7 @@ export const AdminProjectsPage: React.FC = () => {
                       required
                       value={formData.location}
                       onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#d62828]"
+                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#c1121f]"
                       placeholder="e.g. Ikeja, Lagos"
                     />
                   </div>
@@ -304,7 +314,7 @@ export const AdminProjectsPage: React.FC = () => {
                     <select
                       value={formData.status}
                       onChange={(e) => setFormData({ ...formData, status: e.target.value })}
-                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#d62828]"
+                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#c1121f]"
                     >
                       <option value="Ongoing">Ongoing</option>
                       <option value="Completed">Completed</option>
@@ -318,7 +328,7 @@ export const AdminProjectsPage: React.FC = () => {
                     <select
                       value={formData.category}
                       onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#d62828]"
+                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#c1121f]"
                     >
                       <option value="civil-infrastructure">Civil Infrastructure</option>
                       <option value="gas-energy">Gas & Energy EPC</option>
@@ -335,7 +345,7 @@ export const AdminProjectsPage: React.FC = () => {
                       type="text"
                       value={formData.year}
                       onChange={(e) => setFormData({ ...formData, year: e.target.value })}
-                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#d62828]"
+                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#c1121f]"
                       placeholder="2024 - Present"
                     />
                   </div>
@@ -350,7 +360,7 @@ export const AdminProjectsPage: React.FC = () => {
                     required
                     value={formData.mainImage}
                     onChange={(e) => setFormData({ ...formData, mainImage: e.target.value })}
-                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#d62828]"
+                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#c1121f]"
                   />
                 </div>
 
@@ -363,7 +373,7 @@ export const AdminProjectsPage: React.FC = () => {
                     required
                     value={formData.scope}
                     onChange={(e) => setFormData({ ...formData, scope: e.target.value })}
-                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#d62828] resize-none"
+                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#c1121f] resize-none"
                     placeholder="Describe technical engineering deliverables, foundation piling, earthmoving, etc..."
                   ></textarea>
                 </div>
@@ -378,7 +388,7 @@ export const AdminProjectsPage: React.FC = () => {
                   </button>
                   <button
                     type="submit"
-                    className="bg-[#d62828] hover:bg-[#b71c1c] text-white px-6 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow"
+                    className="bg-[#c1121f] hover:bg-[#a50e1a] text-white px-6 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow cursor-pointer"
                   >
                     Save Project
                   </button>
