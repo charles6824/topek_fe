@@ -28,7 +28,7 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenContact }) => {
           {/* Header */}
           <div className="max-w-3xl mb-16">
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-1.5 h-1.5 bg-[#c1121f]"></div>
+              <div className="w-1.5 h-1.5 bg-[#eb2c1f]"></div>
               <span className="font-mono text-[11px] font-semibold text-[#8a8d98] uppercase tracking-[0.2em]">
                 Track Record & Client Portfolio
               </span>
@@ -36,7 +36,7 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenContact }) => {
             <h2 className="text-3xl sm:text-4xl font-black uppercase text-[#141518] font-heading tracking-tight leading-tight">
               TIER-ONE OPERATORS TRUSTING TOPEK.
             </h2>
-            <div className="w-12 h-1 bg-[#c1121f] mt-4 mb-4"></div>
+            <div className="w-12 h-1 bg-[#eb2c1f] mt-4 mb-4"></div>
             <p className="text-sm sm:text-base text-[#555861] font-sans leading-relaxed">
               Our engineering and construction divisions execute complex infrastructure, natural gas PRMS facilities, pipeline networks, and civil works for leading blue-chip corporations across Nigeria.
             </p>
@@ -51,7 +51,7 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenContact }) => {
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <div className="w-12 h-12 rounded-xs bg-[#f5f4f0] border border-[#e5e4de] flex items-center justify-center text-[#141518] group-hover:text-[#c1121f] transition-colors">
+                    <div className="w-12 h-12 rounded-xs bg-[#f5f4f0] border border-[#e5e4de] flex items-center justify-center text-[#141518] group-hover:text-[#eb2c1f] transition-colors">
                       <Buildings size={24} weight="bold" />
                     </div>
                     <span className="font-mono text-[10px] font-semibold text-[#8a8d98] uppercase tracking-wider">
@@ -60,10 +60,10 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenContact }) => {
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-black text-[#141518] font-heading uppercase group-hover:text-[#c1121f] transition-colors">
+                    <h3 className="text-lg font-black text-[#141518] font-heading uppercase group-hover:text-[#eb2c1f] transition-colors">
                       {client.name}
                     </h3>
-                    <p className="text-xs font-mono font-semibold text-[#c1121f] uppercase tracking-wider mt-1">
+                    <p className="text-xs font-mono font-semibold text-[#eb2c1f] uppercase tracking-wider mt-1">
                       {client.industry}
                     </p>
                   </div>
@@ -100,7 +100,7 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenContact }) => {
             <div className="pt-2">
               <button
                 onClick={() => onOpenContact('Corporate Partnership Inquiry')}
-                className="bg-[#c1121f] hover:bg-[#a50e1a] text-white px-8 py-3.5 rounded-xs text-xs font-bold uppercase tracking-wider font-heading transition-colors shadow-sm cursor-pointer inline-flex items-center gap-2"
+                className="bg-[#eb2c1f] hover:bg-[#c81e12] text-white px-8 py-3.5 rounded-xs text-xs font-bold uppercase tracking-wider font-heading transition-colors shadow-sm cursor-pointer inline-flex items-center gap-2"
               >
                 <span>Partner With Us</span>
                 <ArrowRight size={14} weight="bold" />

@@ -8,7 +8,7 @@ interface CtaBannerProps {
 
 export const CtaBanner: React.FC<CtaBannerProps> = ({ onContactClick }) => {
   return (
-    <section className="bg-[#c1121f] text-white py-16 sm:py-20 relative overflow-hidden border-b border-[#9b0d18]">
+    <section className="bg-[#eb2c1f] text-white py-16 sm:py-20 relative overflow-hidden border-b border-[#c81e12]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 text-left">
           <div className="max-w-2xl space-y-3">

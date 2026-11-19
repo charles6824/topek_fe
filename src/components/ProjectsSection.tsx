@@ -70,7 +70,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
         {/* Section Heading */}
         <div className="max-w-3xl mb-12">
           <div className="flex items-center gap-2 mb-3">
-            <div className="w-1.5 h-1.5 bg-[#c1121f]"></div>
+            <div className="w-1.5 h-1.5 bg-[#eb2c1f]"></div>
             <span className="font-mono text-[11px] font-semibold text-[#8a8d98] uppercase tracking-[0.2em]">
               Verified Infrastructure Portfolio · Nigeria
             </span>
@@ -78,7 +78,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
           <h2 className="text-3xl sm:text-4xl font-black text-[#141518] uppercase font-heading tracking-tight leading-tight">
             11 VERIFIED PROJECTS DELIVERED & UNDER EXECUTION.
           </h2>
-          <div className="w-12 h-1 bg-[#c1121f] mt-4 mb-4"></div>
+          <div className="w-12 h-1 bg-[#eb2c1f] mt-4 mb-4"></div>
           <p className="text-sm sm:text-base text-[#555861] font-sans leading-relaxed">
             Multi-billion Naira EPC gas pipeline networks, heavy factory foundations, warehouse logistics terminals, and multi-storey institutional complexes delivered to tier-one industrial clients.
           </p>
@@ -111,7 +111,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                 onClick={() => setCategoryFilter(c.key)}
                 className={`px-3 py-1 text-[11px] font-bold uppercase tracking-wider transition-colors cursor-pointer rounded-xs border ${
                   categoryFilter === c.key
-                    ? 'bg-[#c1121f] text-white border-[#c1121f]'
+                    ? 'bg-[#eb2c1f] text-white border-[#eb2c1f]'
                     : 'bg-white text-[#555861] border-[#e5e4de] hover:border-[#141518] hover:text-[#141518]'
                 }`}
               >
@@ -146,7 +146,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                 <div className="absolute top-3 inset-x-3 flex items-center justify-between z-10">
                   <span className={`px-2 py-0.5 rounded-xs text-[10px] font-mono font-bold uppercase tracking-wider shadow-xs ${
                     project.status === 'Ongoing'
-                      ? 'bg-[#c1121f] text-white'
+                      ? 'bg-[#eb2c1f] text-white'
                       : 'bg-[#141518] text-white border border-white/20'
                   }`}>
                     {project.status}
@@ -165,14 +165,14 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                     Client: {project.client}
                   </span>
                   <div className="flex items-center gap-1.5 text-[11px] text-[#d4d4d8] mt-0.5">
-                    <MapPin size={12} weight="fill" className="text-[#c1121f] shrink-0 group-hover:scale-115 transition-transform duration-200" />
+                    <MapPin size={12} weight="fill" className="text-[#eb2c1f] shrink-0 group-hover:scale-115 transition-transform duration-200" />
                     <span className="truncate">{project.location}</span>
                   </div>
                 </div>
 
                 {/* Hover Inspect Icon */}
                 <div className="absolute inset-0 bg-[#141518]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20">
-                  <div className="w-11 h-11 bg-white text-[#141518] group-hover:bg-[#c1121f] group-hover:text-white rounded-xs flex items-center justify-center shadow-lg transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                  <div className="w-11 h-11 bg-white text-[#141518] group-hover:bg-[#eb2c1f] group-hover:text-white rounded-xs flex items-center justify-center shadow-lg transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
                     <Eye size={20} weight="bold" />
                   </div>
                 </div>
@@ -183,7 +183,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                 <div>
                   <h3
                     onClick={() => onProjectSelect && onProjectSelect(project)}
-                    className="text-base font-bold text-[#141518] group-hover:text-[#c1121f] transition-colors leading-snug line-clamp-2 cursor-pointer font-heading"
+                    className="text-base font-bold text-[#141518] group-hover:text-[#eb2c1f] transition-colors leading-snug line-clamp-2 cursor-pointer font-heading"
                   >
                     {project.title}
                   </h3>
@@ -199,7 +199,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                   </span>
                   <button
                     onClick={() => onProjectSelect ? onProjectSelect(project) : onImageClick(project.image, project.title)}
-                    className="inline-flex items-center gap-1 text-[#141518] group-hover:text-[#c1121f] font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer"
+                    className="inline-flex items-center gap-1 text-[#141518] group-hover:text-[#eb2c1f] font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer"
                   >
                     <span>Inspect</span>
                     <CaretRight size={13} weight="bold" className="transform group-hover:translate-x-1 transition-transform duration-200" />
@@ -214,7 +214,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
           <div className="mt-12 text-center">
             <Link
               to="/projects"
-              className="group/btn inline-flex items-center gap-2 bg-[#141518] hover:bg-[#c1121f] text-white px-8 py-3.5 rounded-xs text-xs font-bold uppercase tracking-widest transition-colors shadow-xs"
+              className="group/btn inline-flex items-center gap-2 bg-[#141518] hover:bg-[#eb2c1f] text-white px-8 py-3.5 rounded-xs text-xs font-bold uppercase tracking-widest transition-colors shadow-xs"
             >
               <span>Explore All 11 Verified Projects</span>
               <ArrowRight size={14} weight="bold" className="transform group-hover/btn:translate-x-1.5 transition-transform duration-200" />

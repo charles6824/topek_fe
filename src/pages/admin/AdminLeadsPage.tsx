@@ -92,7 +92,7 @@ export const AdminLeadsPage: React.FC = () => {
                 onClick={() => setStatusFilter(st)}
                 className={`px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
                   statusFilter === st
-                    ? 'bg-[#c1121f] text-white shadow-sm'
+                    ? 'bg-[#eb2c1f] text-white shadow-sm'
                     : 'text-slate-400 hover:text-white'
                 }`}
               >
@@ -262,7 +262,7 @@ export const AdminLeadsPage: React.FC = () => {
                     <select
                       value={leadStatus}
                       onChange={(e) => setLeadStatus(e.target.value)}
-                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#c1121f]"
+                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#eb2c1f]"
                     >
                       <option value="New">New (Unaddressed)</option>
                       <option value="In-Review">In-Review (Estimating Team Analyzing)</option>
@@ -280,7 +280,7 @@ export const AdminLeadsPage: React.FC = () => {
                       value={internalNotes}
                       onChange={(e) => setInternalNotes(e.target.value)}
                       placeholder="e.g. Sent BOQ template, site inspection scheduled for Thursday in Ikeja..."
-                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#c1121f] resize-none"
+                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#eb2c1f] resize-none"
                     ></textarea>
                   </div>
                 </div>
@@ -296,7 +296,7 @@ export const AdminLeadsPage: React.FC = () => {
                   <button
                     type="button"
                     onClick={handleUpdateStatus}
-                    className="bg-[#c1121f] hover:bg-[#a50e1a] text-white px-6 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow cursor-pointer"
+                    className="bg-[#eb2c1f] hover:bg-[#c81e12] text-white px-6 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow cursor-pointer"
                   >
                     Save Status & Notes
                   </button>

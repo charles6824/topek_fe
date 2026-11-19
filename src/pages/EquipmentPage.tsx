@@ -71,7 +71,7 @@ export const EquipmentPage: React.FC<EquipmentPageProps> = ({ onOpenContact }) =
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 pb-6 border-b border-[#e5e4de]">
             <div>
               <div className="flex items-center gap-2 mb-2">
-                <div className="w-1.5 h-1.5 bg-[#c1121f]"></div>
+                <div className="w-1.5 h-1.5 bg-[#eb2c1f]"></div>
                 <span className="font-mono text-[11px] font-semibold text-[#8a8d98] uppercase tracking-[0.2em]">
                   100% Owned Heavy Plant Machinery · Rapid Mobilization
                 </span>
@@ -88,7 +88,7 @@ export const EquipmentPage: React.FC<EquipmentPageProps> = ({ onOpenContact }) =
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search equipment, specs, tonnage..."
-                className="w-full text-xs pl-9 pr-4 py-3 rounded-xs border border-[#e5e4de] focus:outline-none focus:border-[#c1121f] bg-white shadow-2xs"
+                className="w-full text-xs pl-9 pr-4 py-3 rounded-xs border border-[#e5e4de] focus:outline-none focus:border-[#eb2c1f] bg-white shadow-2xs"
               />
               <MagnifyingGlass size={16} weight="bold" className="absolute left-3 top-3.5 text-[#8a8d98]" />
             </div>
@@ -102,7 +102,7 @@ export const EquipmentPage: React.FC<EquipmentPageProps> = ({ onOpenContact }) =
                 onClick={() => setFilter(cat)}
                 className={`px-3.5 py-1.5 rounded-xs text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer border ${
                   filter === cat
-                    ? 'bg-[#c1121f] text-white border-[#c1121f]'
+                    ? 'bg-[#eb2c1f] text-white border-[#eb2c1f]'
                     : 'bg-white text-[#555861] border-[#e5e4de] hover:border-[#141518] hover:text-[#141518]'
                 }`}
               >
@@ -128,7 +128,7 @@ export const EquipmentPage: React.FC<EquipmentPageProps> = ({ onOpenContact }) =
                     </span>
                   </div>
 
-                  <h3 className="text-base font-bold text-[#141518] group-hover:text-[#c1121f] transition-colors font-heading leading-snug">
+                  <h3 className="text-base font-bold text-[#141518] group-hover:text-[#eb2c1f] transition-colors font-heading leading-snug">
                     {eq.name}
                   </h3>
 
@@ -147,7 +147,7 @@ export const EquipmentPage: React.FC<EquipmentPageProps> = ({ onOpenContact }) =
 
                   <button
                     onClick={() => onOpenContact(`Equipment Mobilization Request: ${eq.name}`)}
-                    className="text-xs font-mono font-bold uppercase text-[#c1121f] hover:text-[#141518] transition-colors cursor-pointer"
+                    className="text-xs font-mono font-bold uppercase text-[#eb2c1f] hover:text-[#141518] transition-colors cursor-pointer"
                   >
                     Mobilize Fleet &rarr;
                   </button>

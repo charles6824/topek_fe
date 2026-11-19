@@ -20,7 +20,7 @@ export const MapSection: React.FC = () => {
       {/* Architectural Head Office Card Overlay */}
       <div className="absolute top-4 left-4 sm:top-6 sm:left-6 bg-[#141518]/95 backdrop-blur-md p-4 sm:p-5 rounded-xs shadow-xl border border-[#2e3138] max-w-[280px] sm:max-w-sm hidden sm:block text-white">
         <div className="flex items-start gap-3">
-          <div className="w-8 h-8 rounded-xs bg-[#c1121f] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-2xs hover:scale-110 hover:shadow-[0_0_12px_rgba(193,18,31,0.6)] transition-all duration-300 cursor-pointer">
+          <div className="w-8 h-8 rounded-xs bg-[#eb2c1f] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-2xs hover:scale-110 hover:shadow-[0_0_12px_rgba(235,44,31,0.6)] transition-all duration-300 cursor-pointer">
             <MapPin size={16} weight="fill" />
           </div>
           <div>
@@ -28,7 +28,7 @@ export const MapSection: React.FC = () => {
               <h4 className="text-xs font-bold uppercase tracking-widest text-white font-heading">
                 Operational Head Office
               </h4>
-              <span className="text-[9px] font-mono text-[#c1121f] font-semibold bg-red-950/80 px-1 py-0.5 rounded-xs border border-red-800">
+              <span className="text-[9px] font-mono text-[#eb2c1f] font-semibold bg-red-950/80 px-1 py-0.5 rounded-xs border border-red-800">
                 LAGOS
               </span>
             </div>
@@ -39,7 +39,7 @@ export const MapSection: React.FC = () => {
               href="https://maps.google.com/?q=Topek+Construction+Limited+Ikeja+Lagos"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs font-mono font-bold text-[#c1121f] hover:text-white transition-colors mt-2.5 inline-block uppercase tracking-wider"
+              className="text-xs font-mono font-bold text-[#eb2c1f] hover:text-white transition-colors mt-2.5 inline-block uppercase tracking-wider"
             >
               Get Directions &rarr;
             </a>

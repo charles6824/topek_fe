@@ -121,7 +121,7 @@ export const PageBanner: React.FC<PageBannerProps> = ({
                 to="/"
                 className="flex items-center gap-1 hover:text-white transition-colors text-white/80"
               >
-                <House size={13} className="text-[#c1121f]" />
+                <House size={13} className="text-[#eb2c1f]" />
                 <span>Home</span>
               </Link>
 
@@ -141,7 +141,7 @@ export const PageBanner: React.FC<PageBannerProps> = ({
 
             {/* Eyebrow Tag with Vertical Red Accent Bar */}
             <div className="flex items-center gap-2 mb-3">
-              <span className="w-1 h-4 sm:h-5 bg-[#c1121f] inline-block rounded-full"></span>
+              <span className="w-1 h-4 sm:h-5 bg-[#eb2c1f] inline-block rounded-full"></span>
               <span className="font-sans text-xs sm:text-[13px] font-bold uppercase tracking-[0.2em] text-white/95">
                 {badge}
               </span>
@@ -153,7 +153,7 @@ export const PageBanner: React.FC<PageBannerProps> = ({
               {accentTitle && (
                 <>
                   <br />
-                  <span className="text-[#c1121f]">{accentTitle}</span>
+                  <span className="text-[#eb2c1f]">{accentTitle}</span>
                 </>
               )}
             </h1>
@@ -169,7 +169,7 @@ export const PageBanner: React.FC<PageBannerProps> = ({
             <div className="flex flex-wrap items-center gap-3.5 pt-1">
               <Link
                 to={ctaPath}
-                className="inline-flex items-center gap-2 bg-[#c1121f] hover:bg-[#9e0e1a] text-white font-bold text-xs sm:text-sm tracking-wider uppercase px-6 py-3 rounded-md shadow-lg transition-all duration-200"
+                className="inline-flex items-center gap-2 bg-[#eb2c1f] hover:bg-[#c81e12] text-white font-bold text-xs sm:text-sm tracking-wider uppercase px-6 py-3 rounded-md shadow-lg transition-all duration-200"
               >
                 <span>{ctaText}</span>
                 <ArrowRight size={15} weight="bold" />
@@ -235,7 +235,7 @@ export const PageBanner: React.FC<PageBannerProps> = ({
                   key={i}
                   className="pt-3 sm:pt-0 sm:px-4 flex items-center justify-center gap-3.5 first:pl-0 last:pr-0"
                 >
-                  <span className="text-3xl sm:text-4xl font-extrabold text-[#c1121f] font-heading tracking-tight shrink-0">
+                  <span className="text-3xl sm:text-4xl font-extrabold text-[#eb2c1f] font-heading tracking-tight shrink-0">
                     {stat.value}
                   </span>
                   <div className="text-[10px] sm:text-[11px] font-bold text-slate-700 uppercase tracking-wider leading-tight text-left">

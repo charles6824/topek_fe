@@ -100,7 +100,7 @@ export const CareerPage: React.FC<CareerPageProps> = ({ onOpenContact }) => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-16">
             <div className="lg:col-span-7 space-y-6">
               <div className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 bg-[#c1121f]"></div>
+                <div className="w-1.5 h-1.5 bg-[#eb2c1f]"></div>
                 <span className="font-mono text-[11px] font-semibold text-[#8a8d98] uppercase tracking-[0.2em]">
                   Talent & Human Capital
                 </span>
@@ -108,26 +108,26 @@ export const CareerPage: React.FC<CareerPageProps> = ({ onOpenContact }) => {
               <h2 className="text-3xl sm:text-4xl font-black uppercase text-[#141518] font-heading tracking-tight leading-tight">
                 BUILD YOUR ENGINEERING CAREER WITH PURPOSE.
               </h2>
-              <div className="w-12 h-1 bg-[#c1121f]"></div>
+              <div className="w-12 h-1 bg-[#eb2c1f]"></div>
               <p className="text-sm sm:text-base text-[#555861] leading-relaxed font-sans">
                 At TOPEK Construction Limited, our personnel drive our operational superiority. We foster an engineering culture founded upon zero-compromise safety, continuous technical advancement, and direct participation in transformative infrastructure projects across Nigeria.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
                 <div className="flex items-center gap-2.5 text-xs font-mono font-semibold text-[#141518]">
-                  <CheckCircle size={16} weight="fill" className="text-[#c1121f] shrink-0" />
+                  <CheckCircle size={16} weight="fill" className="text-[#eb2c1f] shrink-0" />
                   <span>COREN Structured Mentorship</span>
                 </div>
                 <div className="flex items-center gap-2.5 text-xs font-mono font-semibold text-[#141518]">
-                  <CheckCircle size={16} weight="fill" className="text-[#c1121f] shrink-0" />
+                  <CheckCircle size={16} weight="fill" className="text-[#eb2c1f] shrink-0" />
                   <span>750,000+ LTI-Free Safety Culture</span>
                 </div>
                 <div className="flex items-center gap-2.5 text-xs font-mono font-semibold text-[#141518]">
-                  <CheckCircle size={16} weight="fill" className="text-[#c1121f] shrink-0" />
+                  <CheckCircle size={16} weight="fill" className="text-[#eb2c1f] shrink-0" />
                   <span>Competitive Remuneration & Welfare</span>
                 </div>
                 <div className="flex items-center gap-2.5 text-xs font-mono font-semibold text-[#141518]">
-                  <CheckCircle size={16} weight="fill" className="text-[#c1121f] shrink-0" />
+                  <CheckCircle size={16} weight="fill" className="text-[#eb2c1f] shrink-0" />
                   <span>Mega Industrial Project Exposure</span>
                 </div>
               </div>
@@ -149,7 +149,7 @@ export const CareerPage: React.FC<CareerPageProps> = ({ onOpenContact }) => {
                   const elem = document.getElementById('application-form');
                   if (elem) elem.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="mt-2 text-xs font-bold uppercase tracking-wider text-[#c1121f] hover:underline cursor-pointer inline-flex items-center gap-1.5"
+                className="mt-2 text-xs font-bold uppercase tracking-wider text-[#eb2c1f] hover:underline cursor-pointer inline-flex items-center gap-1.5"
               >
                 <span>Apply for Traineeship Program</span>
                 <span>&rarr;</span>
@@ -192,7 +192,7 @@ export const CareerPage: React.FC<CareerPageProps> = ({ onOpenContact }) => {
 
                     <div className="flex items-center gap-4 text-xs font-mono text-[#5f636e]">
                       <span className="flex items-center gap-1">
-                        <MapPin size={14} className="text-[#c1121f]" />
+                        <MapPin size={14} className="text-[#eb2c1f]" />
                         {job.location}
                       </span>
                       <span>EXP: {job.experience}</span>
@@ -210,7 +210,7 @@ export const CareerPage: React.FC<CareerPageProps> = ({ onOpenContact }) => {
                         const elem = document.getElementById('application-form');
                         if (elem) elem.scrollIntoView({ behavior: 'smooth' });
                       }}
-                      className="bg-[#141518] hover:bg-[#c1121f] text-white px-5 py-2.5 rounded-xs text-xs font-bold uppercase tracking-wider font-heading transition-colors cursor-pointer"
+                      className="bg-[#141518] hover:bg-[#eb2c1f] text-white px-5 py-2.5 rounded-xs text-xs font-bold uppercase tracking-wider font-heading transition-colors cursor-pointer"
                     >
                       Apply for Position
                     </button>
@@ -224,7 +224,7 @@ export const CareerPage: React.FC<CareerPageProps> = ({ onOpenContact }) => {
           <div id="application-form" className="bg-white rounded-xs p-8 sm:p-12 border border-[#e5e4de] max-w-3xl mx-auto shadow-sm">
             <div className="text-left mb-8 pb-6 border-b border-[#e5e4de]">
               <div className="flex items-center gap-2 mb-1">
-                <Briefcase size={16} className="text-[#c1121f]" weight="bold" />
+                <Briefcase size={16} className="text-[#eb2c1f]" weight="bold" />
                 <span className="font-mono text-[11px] font-semibold text-[#8a8d98] uppercase tracking-widest">
                   Candidate Portal
                 </span>
@@ -250,7 +250,7 @@ export const CareerPage: React.FC<CareerPageProps> = ({ onOpenContact }) => {
                 </p>
                 <button
                   onClick={() => setAppSubmitted(false)}
-                  className="mt-3 text-xs font-mono font-bold text-[#c1121f] uppercase underline cursor-pointer"
+                  className="mt-3 text-xs font-mono font-bold text-[#eb2c1f] uppercase underline cursor-pointer"
                 >
                   Submit Another Profile
                 </button>
@@ -259,7 +259,7 @@ export const CareerPage: React.FC<CareerPageProps> = ({ onOpenContact }) => {
               <form onSubmit={handleApply} className="space-y-5">
                 {errorMessage && (
                   <div className="p-3 bg-red-950/20 border border-red-500/30 rounded-xs flex items-center gap-2 text-xs text-red-700">
-                    <WarningCircle size={16} weight="fill" className="shrink-0 text-[#c1121f]" />
+                    <WarningCircle size={16} weight="fill" className="shrink-0 text-[#eb2c1f]" />
                     <span>{errorMessage}</span>
                   </div>
                 )}
@@ -342,7 +342,7 @@ export const CareerPage: React.FC<CareerPageProps> = ({ onOpenContact }) => {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="inline-flex items-center gap-2 bg-[#c1121f] hover:bg-[#a50e1a] disabled:opacity-60 disabled:cursor-not-allowed text-white px-8 py-3.5 rounded-xs text-xs font-bold uppercase tracking-wider font-heading transition-colors shadow-xs cursor-pointer"
+                    className="inline-flex items-center gap-2 bg-[#eb2c1f] hover:bg-[#c81e12] disabled:opacity-60 disabled:cursor-not-allowed text-white px-8 py-3.5 rounded-xs text-xs font-bold uppercase tracking-wider font-heading transition-colors shadow-xs cursor-pointer"
                   >
                     <span>{submitting ? 'Transmitting Credentials...' : 'Transmit Application'}</span>
                     <PaperPlaneRight size={14} weight="bold" />

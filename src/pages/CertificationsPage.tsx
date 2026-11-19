@@ -25,7 +25,7 @@ export const CertificationsPage: React.FC<CertificationsPageProps> = ({ onOpenCo
           {/* Header */}
           <div className="max-w-3xl mb-16">
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-1.5 h-1.5 bg-[#c1121f]"></div>
+              <div className="w-1.5 h-1.5 bg-[#eb2c1f]"></div>
               <span className="font-mono text-[11px] font-semibold text-[#8a8d98] uppercase tracking-[0.2em]">
                 Statutory Compliance Matrix
               </span>
@@ -33,7 +33,7 @@ export const CertificationsPage: React.FC<CertificationsPageProps> = ({ onOpenCo
             <h2 className="text-3xl sm:text-4xl font-black uppercase text-[#141518] font-heading tracking-tight leading-tight">
               LICENSES, PERMITS & INDUSTRY STANDARDS.
             </h2>
-            <div className="w-12 h-1 bg-[#c1121f] mt-4 mb-4"></div>
+            <div className="w-12 h-1 bg-[#eb2c1f] mt-4 mb-4"></div>
             <p className="text-sm sm:text-base text-[#555861] font-sans leading-relaxed">
               TOPEK Construction Limited operates with rigorous statutory compliance across Federal and State regulatory bodies overseeing oil, gas, manufacturing, civil engineering, and infrastructure operations in Nigeria.
             </p>
@@ -51,12 +51,12 @@ export const CertificationsPage: React.FC<CertificationsPageProps> = ({ onOpenCo
                     <span className="text-[10px] font-mono font-bold uppercase tracking-wider bg-[#f5f4f0] text-[#141518] px-2.5 py-1 rounded-xs border border-[#e5e4de]">
                       {cert.category}
                     </span>
-                    <div className="w-8 h-8 rounded-xs bg-[#f5f4f0] border border-[#e5e4de] flex items-center justify-center text-[#c1121f]">
+                    <div className="w-8 h-8 rounded-xs bg-[#f5f4f0] border border-[#e5e4de] flex items-center justify-center text-[#eb2c1f]">
                       <Certificate size={18} weight="bold" />
                     </div>
                   </div>
 
-                  <h3 className="text-base font-bold text-[#141518] group-hover:text-[#c1121f] transition-colors font-heading uppercase mb-2">
+                  <h3 className="text-base font-bold text-[#141518] group-hover:text-[#eb2c1f] transition-colors font-heading uppercase mb-2">
                     {cert.title}
                   </h3>
 
@@ -86,7 +86,7 @@ export const CertificationsPage: React.FC<CertificationsPageProps> = ({ onOpenCo
           <div className="mt-16 bg-[#141518] text-white p-8 sm:p-12 rounded-xs border border-[#23252a] shadow-lg flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="space-y-3 text-left max-w-2xl">
               <div className="flex items-center gap-2">
-                <ShieldCheck size={18} className="text-[#c1121f]" weight="fill" />
+                <ShieldCheck size={18} className="text-[#eb2c1f]" weight="fill" />
                 <span className="font-mono text-xs uppercase tracking-widest text-[#a1a1aa]">
                   Tender & Bidding Support
                 </span>
@@ -101,7 +101,7 @@ export const CertificationsPage: React.FC<CertificationsPageProps> = ({ onOpenCo
 
             <button
               onClick={() => onOpenContact('Tender / Certification Pack Request')}
-              className="bg-[#c1121f] hover:bg-[#a50e1a] text-white px-7 py-3.5 rounded-xs text-xs font-bold uppercase tracking-wider font-heading transition-colors shadow-sm shrink-0 cursor-pointer flex items-center gap-2"
+              className="bg-[#eb2c1f] hover:bg-[#c81e12] text-white px-7 py-3.5 rounded-xs text-xs font-bold uppercase tracking-wider font-heading transition-colors shadow-sm shrink-0 cursor-pointer flex items-center gap-2"
             >
               <FileText size={16} weight="bold" />
               <span>Request Compliance Pack</span>

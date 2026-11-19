@@ -213,7 +213,7 @@ export const THREE_PILLARS = [
     number: '02',
     title: 'DESIGN & INTEGRATED BUILD',
     text: 'Seamless delivery from 3D architectural CAD/BIM modeling and geotechnical site investigations to structural steel erection, precision casting, and MEP fit-out.',
-    bgColor: 'bg-[#c1121f]',
+    bgColor: 'bg-[#eb2c1f]',
     image: '/assets/projects/general/20241228_150025.jpg',
     imageAlt: 'Integrated Design and Build'
   },

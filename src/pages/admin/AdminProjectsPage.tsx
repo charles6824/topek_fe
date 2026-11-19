@@ -135,7 +135,7 @@ export const AdminProjectsPage: React.FC = () => {
 
           <button
             onClick={openCreateModal}
-            className="inline-flex items-center gap-2 bg-[#c1121f] hover:bg-[#a50e1a] text-white px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow cursor-pointer"
+            className="inline-flex items-center gap-2 bg-[#eb2c1f] hover:bg-[#c81e12] text-white px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow cursor-pointer"
           >
             <Plus size={16} weight="bold" />
             <span>Add New Project</span>
@@ -164,7 +164,7 @@ export const AdminProjectsPage: React.FC = () => {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Filter by title, client, location..."
-              className="w-full text-xs pl-9 pr-4 py-2.5 rounded-xl border border-slate-800 bg-slate-900 text-white focus:outline-none focus:border-[#c1121f]"
+              className="w-full text-xs pl-9 pr-4 py-2.5 rounded-xl border border-slate-800 bg-slate-900 text-white focus:outline-none focus:border-[#eb2c1f]"
             />
             <MagnifyingGlass size={16} className="absolute left-3 top-3 text-slate-500" />
           </div>
@@ -272,7 +272,7 @@ export const AdminProjectsPage: React.FC = () => {
                     required
                     value={formData.title}
                     onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#c1121f]"
+                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#eb2c1f]"
                   />
                 </div>
 
@@ -286,7 +286,7 @@ export const AdminProjectsPage: React.FC = () => {
                       required
                       value={formData.client}
                       onChange={(e) => setFormData({ ...formData, client: e.target.value })}
-                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#c1121f]"
+                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#eb2c1f]"
                       placeholder="e.g. NNPC/NGML or BUA Cement"
                     />
                   </div>
@@ -300,7 +300,7 @@ export const AdminProjectsPage: React.FC = () => {
                       required
                       value={formData.location}
                       onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#c1121f]"
+                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#eb2c1f]"
                       placeholder="e.g. Ikeja, Lagos"
                     />
                   </div>
@@ -314,7 +314,7 @@ export const AdminProjectsPage: React.FC = () => {
                     <select
                       value={formData.status}
                       onChange={(e) => setFormData({ ...formData, status: e.target.value })}
-                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#c1121f]"
+                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#eb2c1f]"
                     >
                       <option value="Ongoing">Ongoing</option>
                       <option value="Completed">Completed</option>
@@ -328,7 +328,7 @@ export const AdminProjectsPage: React.FC = () => {
                     <select
                       value={formData.category}
                       onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#c1121f]"
+                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#eb2c1f]"
                     >
                       <option value="civil-infrastructure">Civil Infrastructure</option>
                       <option value="gas-energy">Gas & Energy EPC</option>
@@ -345,7 +345,7 @@ export const AdminProjectsPage: React.FC = () => {
                       type="text"
                       value={formData.year}
                       onChange={(e) => setFormData({ ...formData, year: e.target.value })}
-                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#c1121f]"
+                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#eb2c1f]"
                       placeholder="2024 - Present"
                     />
                   </div>
@@ -360,7 +360,7 @@ export const AdminProjectsPage: React.FC = () => {
                     required
                     value={formData.mainImage}
                     onChange={(e) => setFormData({ ...formData, mainImage: e.target.value })}
-                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#c1121f]"
+                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#eb2c1f]"
                   />
                 </div>
 
@@ -373,7 +373,7 @@ export const AdminProjectsPage: React.FC = () => {
                     required
                     value={formData.scope}
                     onChange={(e) => setFormData({ ...formData, scope: e.target.value })}
-                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#c1121f] resize-none"
+                    className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:border-[#eb2c1f] resize-none"
                     placeholder="Describe technical engineering deliverables, foundation piling, earthmoving, etc..."
                   ></textarea>
                 </div>
@@ -388,7 +388,7 @@ export const AdminProjectsPage: React.FC = () => {
                   </button>
                   <button
                     type="submit"
-                    className="bg-[#c1121f] hover:bg-[#a50e1a] text-white px-6 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow cursor-pointer"
+                    className="bg-[#eb2c1f] hover:bg-[#c81e12] text-white px-6 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow cursor-pointer"
                   >
                     Save Project
                   </button>

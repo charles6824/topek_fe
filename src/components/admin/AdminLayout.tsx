@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import {
-  HardHat,
   SquaresFour,
   Buildings,
   Truck,
@@ -58,12 +57,10 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col md:flex-row font-sans">
       {/* Mobile Top Header */}
       <div className="md:hidden bg-slate-900 border-b border-slate-800 p-4 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-[#c1121f] flex items-center justify-center shadow">
-            <HardHat size={18} weight="fill" className="text-white" />
-          </div>
+        <div className="flex items-center gap-2.5">
+          <img src="/gear-mark.png" alt="TOPEK" className="w-8 h-8 object-contain shrink-0" />
           <div>
-            <span className="font-montserrat font-black text-sm text-white">TOPEK</span>
+            <span className="font-heading font-black text-sm text-white">TOPEK</span>
             <span className="text-[10px] text-amber-400 font-bold ml-1">ADMIN CMS</span>
           </div>
         </div>
@@ -85,9 +82,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
         <div className="space-y-6">
           {/* Brand Emblem */}
           <div className="flex items-center gap-3 pb-5 border-b border-slate-800">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#c1121f] to-[#7f1d1d] flex items-center justify-center shadow-lg">
-              <HardHat size={22} weight="fill" className="text-white" />
-            </div>
+            <img src="/gear-mark.png" alt="TOPEK" className="w-10 h-10 object-contain shrink-0" />
             <div>
               <div className="flex items-center gap-1.5">
                 <span className="font-montserrat font-black text-lg text-white">TOPEK</span>
@@ -126,7 +121,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
                   onClick={() => setSidebarOpen(false)}
                   className={`flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-bold tracking-wide transition-all ${
                     active
-                      ? 'bg-[#c1121f] text-white shadow-md'
+                      ? 'bg-[#eb2c1f] text-white shadow-md'
                       : 'text-slate-400 hover:text-white hover:bg-slate-800/70'
                   }`}
                 >

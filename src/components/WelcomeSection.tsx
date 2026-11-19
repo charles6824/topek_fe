@@ -19,16 +19,16 @@ export const WelcomeSection: React.FC<WelcomeSectionProps> = ({ onImageClick }) 
           <div className="lg:col-span-6 space-y-7">
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <div className="w-1.5 h-1.5 bg-[#c1121f]"></div>
+                <div className="w-1.5 h-1.5 bg-[#eb2c1f]"></div>
                 <span className="font-mono text-[11px] font-semibold text-[#8a8d98] uppercase tracking-[0.2em]">
                   Corporate Governance · CAC RC: 1946874
                 </span>
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-black uppercase text-[#141518] font-heading tracking-tight leading-[1.15]">
                 ENGINEERING NIGERIA'S <br />
-                <span className="text-[#c1121f]">INDUSTRIAL LANDMARKS.</span>
+                <span className="text-[#eb2c1f]">INDUSTRIAL LANDMARKS.</span>
               </h2>
-              <div className="w-12 h-1 bg-[#c1121f] mt-4"></div>
+              <div className="w-12 h-1 bg-[#eb2c1f] mt-4"></div>
             </div>
 
             <p className="text-sm sm:text-base text-[#4a4d56] leading-relaxed font-sans">
@@ -47,10 +47,10 @@ export const WelcomeSection: React.FC<WelcomeSectionProps> = ({ onImageClick }) 
                 { title: '750,000+ Safe Hours', desc: 'Zero Lost Time Injury (LTI) Record' },
                 { title: '70+ Owned Heavy Machines', desc: 'CAT, Tadano, Komatsu & Howo Fleet' },
               ].map((item, idx) => (
-                <div key={idx} className="group/cred bg-white p-3.5 border border-[#e5e4de] hover:border-[#c1121f]/60 rounded-xs shadow-2xs hover:shadow-xs transition-all duration-300">
+                <div key={idx} className="group/cred bg-white p-3.5 border border-[#e5e4de] hover:border-[#eb2c1f]/60 rounded-xs shadow-2xs hover:shadow-xs transition-all duration-300">
                   <div className="flex items-center gap-2">
-                    <CheckSquare size={16} weight="fill" className="text-[#c1121f] shrink-0 group-hover/cred:scale-125 transition-transform duration-200" />
-                    <span className="text-xs font-bold text-[#141518] group-hover/cred:text-[#c1121f] uppercase tracking-wide font-heading transition-colors duration-200">{item.title}</span>
+                    <CheckSquare size={16} weight="fill" className="text-[#eb2c1f] shrink-0 group-hover/cred:scale-125 transition-transform duration-200" />
+                    <span className="text-xs font-bold text-[#141518] group-hover/cred:text-[#eb2c1f] uppercase tracking-wide font-heading transition-colors duration-200">{item.title}</span>
                   </div>
                   <p className="text-[11px] text-[#71717a] mt-1 pl-6">{item.desc}</p>
                 </div>
@@ -61,7 +61,7 @@ export const WelcomeSection: React.FC<WelcomeSectionProps> = ({ onImageClick }) 
             <div className="pt-3 flex flex-wrap items-center gap-3.5">
               <Link
                 to="/who-we-are"
-                className="group/btn inline-flex items-center gap-2 bg-[#141518] hover:bg-[#c1121f] text-white px-7 py-3.5 rounded-xs text-xs font-bold uppercase tracking-widest transition-colors shadow-xs"
+                className="group/btn inline-flex items-center gap-2 bg-[#141518] hover:bg-[#eb2c1f] text-white px-7 py-3.5 rounded-xs text-xs font-bold uppercase tracking-widest transition-colors shadow-xs"
               >
                 <span>Corporate Overview</span>
                 <ArrowRight size={14} weight="bold" className="transform group-hover/btn:translate-x-1.5 transition-transform duration-200" />
@@ -92,7 +92,7 @@ export const WelcomeSection: React.FC<WelcomeSectionProps> = ({ onImageClick }) 
               <div className="absolute inset-0 bg-gradient-to-t from-[#141518]/90 via-[#141518]/30 to-transparent"></div>
 
               {/* Verified EPC Stamp */}
-              <div className="absolute top-4 left-4 bg-[#c1121f] text-white text-[10px] font-mono uppercase tracking-widest px-2.5 py-1 rounded-xs font-bold shadow-sm">
+              <div className="absolute top-4 left-4 bg-[#eb2c1f] text-white text-[10px] font-mono uppercase tracking-widest px-2.5 py-1 rounded-xs font-bold shadow-sm">
                 FLAGSHIP EPC PROJECT
               </div>
 
@@ -111,7 +111,7 @@ export const WelcomeSection: React.FC<WelcomeSectionProps> = ({ onImageClick }) 
 
               {/* Hover Inspect Icon */}
               <div className="absolute inset-0 bg-[#141518]/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                <div className="w-12 h-12 bg-white text-[#141518] group-hover:bg-[#c1121f] group-hover:text-white rounded-xs flex items-center justify-center shadow-lg transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                <div className="w-12 h-12 bg-white text-[#141518] group-hover:bg-[#eb2c1f] group-hover:text-white rounded-xs flex items-center justify-center shadow-lg transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
                   <Eye size={22} weight="bold" />
                 </div>
               </div>

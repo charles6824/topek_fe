@@ -19,14 +19,14 @@ import {
 } from '@phosphor-icons/react';
 
 const iconMap: Record<string, React.ReactNode> = {
-  Buildings: <Buildings size={32} weight="duotone" className="text-[#c1121f]" />,
-  Compass: <Compass size={32} weight="duotone" className="text-[#c1121f]" />,
-  Users: <Users size={32} weight="duotone" className="text-[#c1121f]" />,
-  HouseLine: <HouseLine size={32} weight="duotone" className="text-[#c1121f]" />,
-  Armchair: <Armchair size={32} weight="duotone" className="text-[#c1121f]" />,
-  Package: <Package size={32} weight="duotone" className="text-[#c1121f]" />,
-  Plant: <Plant size={32} weight="duotone" className="text-[#c1121f]" />,
-  Truck: <Truck size={32} weight="duotone" className="text-[#c1121f]" />,
+  Buildings: <Buildings size={32} weight="duotone" className="text-[#eb2c1f]" />,
+  Compass: <Compass size={32} weight="duotone" className="text-[#eb2c1f]" />,
+  Users: <Users size={32} weight="duotone" className="text-[#eb2c1f]" />,
+  HouseLine: <HouseLine size={32} weight="duotone" className="text-[#eb2c1f]" />,
+  Armchair: <Armchair size={32} weight="duotone" className="text-[#eb2c1f]" />,
+  Package: <Package size={32} weight="duotone" className="text-[#eb2c1f]" />,
+  Plant: <Plant size={32} weight="duotone" className="text-[#eb2c1f]" />,
+  Truck: <Truck size={32} weight="duotone" className="text-[#eb2c1f]" />,
 };
 
 interface ServicesPageProps {
@@ -65,7 +65,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 pb-6 border-b border-[#e5e4de]">
             <div>
               <div className="flex items-center gap-2 mb-2">
-                <div className="w-1.5 h-1.5 bg-[#c1121f]"></div>
+                <div className="w-1.5 h-1.5 bg-[#eb2c1f]"></div>
                 <span className="font-mono text-[11px] font-semibold text-[#8a8d98] uppercase tracking-[0.2em]">
                   Comprehensive Technical Directory · RC 1946874
                 </span>
@@ -81,7 +81,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search divisions & capabilities..."
-                className="w-full text-xs pl-9 pr-9 py-3 rounded-xs border border-[#e5e4de] focus:outline-none focus:border-[#c1121f] bg-white shadow-2xs"
+                className="w-full text-xs pl-9 pr-9 py-3 rounded-xs border border-[#e5e4de] focus:outline-none focus:border-[#eb2c1f] bg-white shadow-2xs"
               />
               <MagnifyingGlass size={16} weight="bold" className="absolute left-3 top-3.5 text-[#8a8d98]" />
               {search && (
@@ -135,7 +135,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                     <div className={`lg:col-span-7 p-6 sm:p-10 flex flex-col justify-between ${isEven ? 'lg:order-1' : ''}`}>
                       <div className="space-y-4">
                         <div className="flex items-center gap-3.5">
-                          <div className="w-12 h-12 rounded-xs bg-[#f5f4f0] text-[#c1121f] flex items-center justify-center border border-[#e5e4de] shrink-0">
+                          <div className="w-12 h-12 rounded-xs bg-[#f5f4f0] text-[#eb2c1f] flex items-center justify-center border border-[#e5e4de] shrink-0">
                             {iconMap[div.icon] || <Buildings size={26} weight="bold" />}
                           </div>
                           <div>
@@ -160,7 +160,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                             {div.capabilities.map((cap, i) => (
                               <div key={i} className="flex items-center gap-2 text-xs font-semibold text-[#141518] bg-[#faf9f6] p-2.5 rounded-xs border border-[#e5e4de]">
-                                <CheckCircle size={14} weight="fill" className="text-[#c1121f] shrink-0" />
+                                <CheckCircle size={14} weight="fill" className="text-[#eb2c1f] shrink-0" />
                                 <span>{cap}</span>
                               </div>
                             ))}
@@ -172,7 +172,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                       <div className="pt-6 mt-6 border-t border-[#f0eee6] flex flex-wrap items-center justify-between gap-3">
                         <button
                           onClick={() => onOpenContact(`Inquiry: Division ${div.number} - ${div.title}`)}
-                          className="inline-flex items-center gap-2 bg-[#c1121f] hover:bg-[#141518] text-white text-xs font-bold uppercase tracking-widest px-5 py-2.5 rounded-xs transition-colors shadow-2xs cursor-pointer"
+                          className="inline-flex items-center gap-2 bg-[#eb2c1f] hover:bg-[#141518] text-white text-xs font-bold uppercase tracking-widest px-5 py-2.5 rounded-xs transition-colors shadow-2xs cursor-pointer"
                         >
                           <FileText size={15} weight="bold" />
                           <span>Request Division RFQ</span>
@@ -180,7 +180,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
 
                         <button
                           onClick={() => onSelectDivision && onSelectDivision(div)}
-                          className="text-xs font-bold text-[#141518] hover:text-[#c1121f] uppercase tracking-wider flex items-center gap-1.5 cursor-pointer transition-colors"
+                          className="text-xs font-bold text-[#141518] hover:text-[#eb2c1f] uppercase tracking-wider flex items-center gap-1.5 cursor-pointer transition-colors"
                         >
                           <span>Explore Detailed Specifications</span>
                           <ArrowRight size={14} weight="bold" />

@@ -37,7 +37,7 @@ export const NewsPage: React.FC<NewsPageProps> = ({ onOpenContact }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-16">
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-1.5 h-1.5 bg-[#c1121f]"></div>
+              <div className="w-1.5 h-1.5 bg-[#eb2c1f]"></div>
               <span className="font-mono text-[11px] font-semibold text-[#8a8d98] uppercase tracking-[0.2em]">
                 Corporate Publications
               </span>
@@ -45,7 +45,7 @@ export const NewsPage: React.FC<NewsPageProps> = ({ onOpenContact }) => {
             <h2 className="text-3xl sm:text-4xl font-black uppercase text-[#141518] font-heading tracking-tight leading-tight">
               FIELD MILESTONES & TECHNICAL DISPATCHES.
             </h2>
-            <div className="w-12 h-1 bg-[#c1121f] mt-4 mb-4"></div>
+            <div className="w-12 h-1 bg-[#eb2c1f] mt-4 mb-4"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -69,7 +69,7 @@ export const NewsPage: React.FC<NewsPageProps> = ({ onOpenContact }) => {
                   <div className="p-6">
                     <div className="flex items-center gap-4 font-mono text-[11px] text-[#8a8d98] mb-3">
                       <span className="flex items-center gap-1.5">
-                        <Calendar size={13} weight="bold" className="text-[#c1121f]" />
+                        <Calendar size={13} weight="bold" className="text-[#eb2c1f]" />
                         {article.date}
                       </span>
                       <span className="flex items-center gap-1.5">
@@ -78,7 +78,7 @@ export const NewsPage: React.FC<NewsPageProps> = ({ onOpenContact }) => {
                       </span>
                     </div>
 
-                    <h3 className="text-base font-black text-[#141518] group-hover:text-[#c1121f] transition-colors leading-snug font-heading uppercase line-clamp-2 mb-2">
+                    <h3 className="text-base font-black text-[#141518] group-hover:text-[#eb2c1f] transition-colors leading-snug font-heading uppercase line-clamp-2 mb-2">
                       {article.title}
                     </h3>
 
@@ -91,7 +91,7 @@ export const NewsPage: React.FC<NewsPageProps> = ({ onOpenContact }) => {
                 <div className="px-6 pb-6 pt-0">
                   <button
                     onClick={() => setSelectedArticle(article)}
-                    className="inline-flex items-center gap-1.5 font-mono text-xs font-bold uppercase text-[#c1121f] hover:text-[#141518] transition-colors cursor-pointer"
+                    className="inline-flex items-center gap-1.5 font-mono text-xs font-bold uppercase text-[#eb2c1f] hover:text-[#141518] transition-colors cursor-pointer"
                   >
                     <span>Read Dispatch</span>
                     <ArrowRight size={13} weight="bold" />
@@ -146,7 +146,7 @@ export const NewsPage: React.FC<NewsPageProps> = ({ onOpenContact }) => {
               <div className="pt-4 text-right">
                 <button
                   onClick={() => setSelectedArticle(null)}
-                  className="bg-[#141518] hover:bg-[#c1121f] text-white px-6 py-2.5 rounded-xs text-xs font-bold uppercase tracking-wider font-heading cursor-pointer transition-colors"
+                  className="bg-[#141518] hover:bg-[#eb2c1f] text-white px-6 py-2.5 rounded-xs text-xs font-bold uppercase tracking-wider font-heading cursor-pointer transition-colors"
                 >
                   Close
                 </button>

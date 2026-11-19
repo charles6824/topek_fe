@@ -19,25 +19,17 @@ export const Footer: React.FC = () => {
           {/* Column 1: Company Profile */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-[#1e2025] rounded-xs flex items-center justify-center border border-[#2e3138]">
-                <div className="relative w-5 h-5 flex flex-col items-center justify-center">
-                  <div className="w-5 h-1.5 bg-white"></div>
-                  <div className="w-1.5 h-3.5 bg-white"></div>
-                  <div className="absolute top-0 right-0 w-1.5 h-1.5 bg-[#c1121f]"></div>
-                </div>
-              </div>
-              <div>
-                <span className="font-heading font-black text-xl text-white tracking-tight">
-                  TOPEK<span className="text-[#c1121f]">.</span>
-                </span>
-                <span className="block text-[9px] font-bold tracking-[0.2em] text-[#8a8d98] uppercase">
-                  CONSTRUCTION LIMITED
-                </span>
-              </div>
+              <Link to="/" className="inline-block">
+                <img
+                  src="/logo-white.png"
+                  alt="TOPEK Construction Limited"
+                  className="h-10 sm:h-11 w-auto object-contain"
+                />
+              </Link>
             </div>
 
             <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xs bg-[#1e2025] border border-[#2e3138] text-[#e5e4de] font-mono text-[11px]">
-              <ShieldCheck size={14} weight="fill" className="text-[#c1121f]" />
+              <ShieldCheck size={14} weight="fill" className="text-[#eb2c1f]" />
               <span>CAC {COMPANY_INFO.cacNumber}</span>
             </div>
 
@@ -62,7 +54,7 @@ export const Footer: React.FC = () => {
                     to={div.link}
                     className="text-xs text-[#a1a1aa] hover:text-white flex items-center gap-2 transition-colors group"
                   >
-                    <CaretRight size={12} weight="bold" className="text-[#c1121f] group-hover:translate-x-1 transition-transform" />
+                    <CaretRight size={12} weight="bold" className="text-[#eb2c1f] group-hover:translate-x-1 transition-transform" />
                     <span className="truncate">{div.number}. {div.title}</span>
                   </Link>
                 </li>
@@ -70,7 +62,7 @@ export const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/services"
-                  className="text-xs font-bold text-[#c1121f] hover:text-rose-400 inline-flex items-center gap-1 mt-1 uppercase tracking-wider"
+                  className="text-xs font-bold text-[#eb2c1f] hover:text-rose-400 inline-flex items-center gap-1 mt-1 uppercase tracking-wider"
                 >
                   <span>View All 8 Divisions</span>
                   <CaretRight size={12} weight="bold" />
@@ -87,37 +79,37 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2">
               <li>
                 <Link to="/projects?filter=Ongoing" className="text-xs text-[#a1a1aa] hover:text-white flex items-center gap-2 transition-colors group">
-                  <CaretRight size={12} weight="bold" className="text-[#c1121f] group-hover:translate-x-1 transition-transform" />
+                  <CaretRight size={12} weight="bold" className="text-[#eb2c1f] group-hover:translate-x-1 transition-transform" />
                   <span>Ongoing Flagship Projects</span>
                 </Link>
               </li>
               <li>
                 <Link to="/projects?filter=Completed" className="text-xs text-[#a1a1aa] hover:text-white flex items-center gap-2 transition-colors group">
-                  <CaretRight size={12} weight="bold" className="text-[#c1121f] group-hover:translate-x-1 transition-transform" />
+                  <CaretRight size={12} weight="bold" className="text-[#eb2c1f] group-hover:translate-x-1 transition-transform" />
                   <span>Completed Engineering Works</span>
                 </Link>
               </li>
               <li>
                 <Link to="/equipment" className="text-xs text-[#a1a1aa] hover:text-white flex items-center gap-2 transition-colors group">
-                  <CaretRight size={12} weight="bold" className="text-[#c1121f] group-hover:translate-x-1 transition-transform" />
+                  <CaretRight size={12} weight="bold" className="text-[#eb2c1f] group-hover:translate-x-1 transition-transform" />
                   <span>Heavy Equipment Fleet (70+ Units)</span>
                 </Link>
               </li>
               <li>
                 <Link to="/hse-policy" className="text-xs text-[#a1a1aa] hover:text-white flex items-center gap-2 transition-colors group">
-                  <CaretRight size={12} weight="bold" className="text-[#c1121f] group-hover:translate-x-1 transition-transform" />
+                  <CaretRight size={12} weight="bold" className="text-[#eb2c1f] group-hover:translate-x-1 transition-transform" />
                   <span>ISO 45001 HSE Zero-Harm Policy</span>
                 </Link>
               </li>
               <li>
                 <Link to="/certifications" className="text-xs text-[#a1a1aa] hover:text-white flex items-center gap-2 transition-colors group">
-                  <CaretRight size={12} weight="bold" className="text-[#c1121f] group-hover:translate-x-1 transition-transform" />
+                  <CaretRight size={12} weight="bold" className="text-[#eb2c1f] group-hover:translate-x-1 transition-transform" />
                   <span>NUPRC / NipeX / COREN Accreditations</span>
                 </Link>
               </li>
               <li>
                 <Link to="/clients" className="text-xs text-[#a1a1aa] hover:text-white flex items-center gap-2 transition-colors group">
-                  <CaretRight size={12} weight="bold" className="text-[#c1121f] group-hover:translate-x-1 transition-transform" />
+                  <CaretRight size={12} weight="bold" className="text-[#eb2c1f] group-hover:translate-x-1 transition-transform" />
                   <span>Distinguished Clients & Partners</span>
                 </Link>
               </li>
@@ -131,7 +123,7 @@ export const Footer: React.FC = () => {
             </h3>
             <div className="space-y-3 text-xs text-[#a1a1aa]">
               <div className="group/contact flex items-start gap-2.5 transition-colors">
-                <MapPin size={16} weight="fill" className="text-[#c1121f] shrink-0 mt-0.5 group-hover/contact:scale-120 transition-transform duration-200" />
+                <MapPin size={16} weight="fill" className="text-[#eb2c1f] shrink-0 mt-0.5 group-hover/contact:scale-120 transition-transform duration-200" />
                 <span>
                   <strong className="text-white">Head Office:</strong>
                   <br />
@@ -140,17 +132,17 @@ export const Footer: React.FC = () => {
               </div>
 
               <div className="group/contact flex items-center gap-2.5">
-                <Phone size={16} weight="fill" className="text-[#c1121f] shrink-0 group-hover/contact:scale-120 group-hover/contact:rotate-12 transition-transform duration-200" />
+                <Phone size={16} weight="fill" className="text-[#eb2c1f] shrink-0 group-hover/contact:scale-120 group-hover/contact:rotate-12 transition-transform duration-200" />
                 <span>
                   <strong className="text-white">Direct Line:</strong>{' '}
-                  <a href={`tel:${COMPANY_INFO.phone}`} className="text-white hover:text-[#c1121f] transition-colors font-medium">
+                  <a href={`tel:${COMPANY_INFO.phone}`} className="text-white hover:text-[#eb2c1f] transition-colors font-medium">
                     {COMPANY_INFO.phoneDisplay}
                   </a>
                 </span>
               </div>
 
               <div className="group/contact flex items-center gap-2.5">
-                <EnvelopeSimple size={16} weight="fill" className="text-[#c1121f] shrink-0 group-hover/contact:scale-120 transition-transform duration-200" />
+                <EnvelopeSimple size={16} weight="fill" className="text-[#eb2c1f] shrink-0 group-hover/contact:scale-120 transition-transform duration-200" />
                 <span className="truncate">
                   <strong className="text-white">Email:</strong>{' '}
                   <a href={`mailto:${COMPANY_INFO.email}`} className="hover:text-white transition-colors">
@@ -160,7 +152,7 @@ export const Footer: React.FC = () => {
               </div>
 
               <div className="group/contact flex items-center gap-2.5">
-                <Globe size={16} weight="fill" className="text-[#c1121f] shrink-0 group-hover/contact:scale-120 transition-transform duration-200" />
+                <Globe size={16} weight="fill" className="text-[#eb2c1f] shrink-0 group-hover/contact:scale-120 transition-transform duration-200" />
                 <span>
                   <strong className="text-white">Web:</strong>{' '}
                   <span className="text-[#a1a1aa] group-hover/contact:text-white transition-colors">{COMPANY_INFO.website}</span>
@@ -170,7 +162,7 @@ export const Footer: React.FC = () => {
               <div className="pt-2">
                 <Link
                   to="/contact"
-                  className="inline-block w-full text-center bg-[#c1121f] hover:bg-white hover:text-[#141518] text-white py-2.5 rounded-xs font-bold text-xs uppercase tracking-widest transition-colors shadow-2xs"
+                  className="inline-block w-full text-center bg-[#eb2c1f] hover:bg-white hover:text-[#141518] text-white py-2.5 rounded-xs font-bold text-xs uppercase tracking-widest transition-colors shadow-2xs"
                 >
                   Submit Project RFQ
                 </Link>

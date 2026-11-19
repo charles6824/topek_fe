@@ -32,7 +32,7 @@ export const WhoWeArePage: React.FC<WhoWeArePageProps> = ({ onOpenContact }) => 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-7 space-y-6">
               <div className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 bg-[#c1121f]"></div>
+                <div className="w-1.5 h-1.5 bg-[#eb2c1f]"></div>
                 <span className="font-mono text-[11px] font-semibold text-[#8a8d98] uppercase tracking-[0.2em]">
                   Corporate Governance · CAC RC: {COMPANY_INFO.cacNumber}
                 </span>
@@ -41,7 +41,7 @@ export const WhoWeArePage: React.FC<WhoWeArePageProps> = ({ onOpenContact }) => 
               <h2 className="text-3xl sm:text-4xl font-black uppercase text-[#141518] font-heading tracking-tight leading-tight">
                 PIONEERING NIGERIAN INFRASTRUCTURE WITH RIGOR & SCALE.
               </h2>
-              <div className="w-12 h-1 bg-[#c1121f]"></div>
+              <div className="w-12 h-1 bg-[#eb2c1f]"></div>
 
               <p className="text-sm sm:text-base text-[#555861] leading-relaxed font-sans">
                 {COMPANY_INFO.about}
@@ -54,7 +54,7 @@ export const WhoWeArePage: React.FC<WhoWeArePageProps> = ({ onOpenContact }) => 
               {/* Pillars Box */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 <div className="p-4 rounded-xs bg-white border border-[#e5e4de] flex items-start gap-3 shadow-2xs">
-                  <div className="p-2.5 rounded-xs bg-[#f5f4f0] text-[#c1121f] shrink-0 border border-[#e5e4de]">
+                  <div className="p-2.5 rounded-xs bg-[#f5f4f0] text-[#eb2c1f] shrink-0 border border-[#e5e4de]">
                     <HardHat size={22} weight="fill" />
                   </div>
                   <div>
@@ -120,7 +120,7 @@ export const WhoWeArePage: React.FC<WhoWeArePageProps> = ({ onOpenContact }) => 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-12">
             <div className="flex items-center gap-2 mb-2">
-              <div className="w-1.5 h-1.5 bg-[#c1121f]"></div>
+              <div className="w-1.5 h-1.5 bg-[#eb2c1f]"></div>
               <span className="font-mono text-[11px] font-semibold text-[#8a8d98] uppercase tracking-[0.2em]">
                 Multidisciplinary Vertical Integration
               </span>
@@ -128,7 +128,7 @@ export const WhoWeArePage: React.FC<WhoWeArePageProps> = ({ onOpenContact }) => 
             <h2 className="text-2xl sm:text-3xl font-black uppercase text-[#141518] font-heading">
               8 Specialized Divisions
             </h2>
-            <div className="w-12 h-1 bg-[#c1121f] mt-3"></div>
+            <div className="w-12 h-1 bg-[#eb2c1f] mt-3"></div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">

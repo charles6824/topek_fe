@@ -53,7 +53,7 @@ export const MissionVisionSection: React.FC = () => {
           <div className="space-y-6">
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <div className="w-1.5 h-1.5 bg-[#c1121f]"></div>
+                <div className="w-1.5 h-1.5 bg-[#eb2c1f]"></div>
                 <span className="font-mono text-[11px] font-semibold text-[#a1a1aa] uppercase tracking-[0.2em]">
                   Purpose & Strategic Mandate
                 </span>
@@ -61,7 +61,7 @@ export const MissionVisionSection: React.FC = () => {
               <h2 className="text-3xl sm:text-4xl font-black uppercase font-heading tracking-tight leading-tight text-white">
                 OUR MISSION.
               </h2>
-              <div className="w-12 h-1 bg-[#c1121f] mt-4 mb-4"></div>
+              <div className="w-12 h-1 bg-[#eb2c1f] mt-4 mb-4"></div>
               <p className="text-sm sm:text-base text-[#d4d4d8] leading-relaxed font-sans mb-8">
                 {COMPANY_INFO.mission}
               </p>
@@ -72,9 +72,9 @@ export const MissionVisionSection: React.FC = () => {
               {COMPANY_INFO.missionPoints.map((point, idx) => (
                 <div
                   key={idx}
-                  className="flex items-start gap-4 p-4 rounded-xs bg-[#1e2025] border border-[#2e3138] hover:border-[#c1121f] transition-colors"
+                  className="flex items-start gap-4 p-4 rounded-xs bg-[#1e2025] border border-[#2e3138] hover:border-[#eb2c1f] transition-colors"
                 >
-                  <div className="w-8 h-8 rounded-xs bg-[#141518] border border-[#2e3138] text-[#c1121f] flex items-center justify-center font-bold text-xs shrink-0 font-mono">
+                  <div className="w-8 h-8 rounded-xs bg-[#141518] border border-[#2e3138] text-[#eb2c1f] flex items-center justify-center font-bold text-xs shrink-0 font-mono">
                     0{idx + 1}
                   </div>
                   <span className="text-xs sm:text-sm font-semibold text-[#e5e4de] uppercase font-sans leading-relaxed pt-1">

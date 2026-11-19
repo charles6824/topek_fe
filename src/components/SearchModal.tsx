@@ -68,7 +68,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
           )}
           <button
             onClick={onClose}
-            className="font-mono text-[10px] font-bold uppercase text-[#555861] hover:text-[#c1121f] ml-1 px-2.5 py-1 rounded-xs bg-[#e5e4de] cursor-pointer"
+            className="font-mono text-[10px] font-bold uppercase text-[#555861] hover:text-[#eb2c1f] ml-1 px-2.5 py-1 rounded-xs bg-[#e5e4de] cursor-pointer"
           >
             Esc
           </button>
@@ -92,7 +92,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
           {matchingDivisions.length > 0 && (
             <div>
               <div className="flex items-center gap-2 mb-3 px-1">
-                <div className="w-1.5 h-1.5 bg-[#c1121f]"></div>
+                <div className="w-1.5 h-1.5 bg-[#eb2c1f]"></div>
                 <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-[#141518]">
                   Operational Divisions ({matchingDivisions.length})
                 </span>
@@ -151,7 +151,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
                         <p className="font-heading font-black uppercase text-[#141518] line-clamp-1">
                           {project.title}
                         </p>
-                        <p className="text-[10px] font-mono text-[#c1121f] font-semibold uppercase mt-0.5">
+                        <p className="text-[10px] font-mono text-[#eb2c1f] font-semibold uppercase mt-0.5">
                           {project.client} · {project.location}
                         </p>
                       </div>

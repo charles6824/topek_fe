@@ -7,7 +7,7 @@ export const CoreValues: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-12">
           <div className="flex items-center gap-2 mb-3">
-            <div className="w-1.5 h-1.5 bg-[#c1121f]"></div>
+            <div className="w-1.5 h-1.5 bg-[#eb2c1f]"></div>
             <span className="font-mono text-[11px] font-semibold text-[#8a8d98] uppercase tracking-[0.2em]">
               Organizational Culture & Governance
             </span>
@@ -15,7 +15,7 @@ export const CoreValues: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl font-black text-[#141518] uppercase font-heading tracking-tight leading-tight">
             THE T-O-P-E-K VALUE FRAMEWORK.
           </h2>
-          <div className="w-12 h-1 bg-[#c1121f] mt-4 mb-4"></div>
+          <div className="w-12 h-1 bg-[#eb2c1f] mt-4 mb-4"></div>
           <p className="text-sm sm:text-base text-[#555861] font-sans leading-relaxed">
             The foundational ethos guiding every site engineer, quantity surveyor, project director, and plant operator on TOPEK jobsites nationwide.
           </p>
@@ -30,12 +30,12 @@ export const CoreValues: React.FC = () => {
             >
               <div>
                 {/* Acrostic Letter Block */}
-                <div className="w-11 h-11 rounded-xs bg-[#141518] group-hover:bg-[#c1121f] text-white flex items-center justify-center font-black text-xl font-mono transition-all duration-300 shadow-2xs group-hover:scale-110 group-hover:shadow-[0_6px_16px_rgba(193,18,31,0.4)] mb-4">
+                <div className="w-11 h-11 rounded-xs bg-[#141518] group-hover:bg-[#eb2c1f] text-white flex items-center justify-center font-black text-xl font-mono transition-all duration-300 shadow-2xs group-hover:scale-110 group-hover:shadow-[0_6px_16px_rgba(235,44,31,0.4)] mb-4">
                   {val.letter}
                 </div>
 
                 {/* Word Title */}
-                <h3 className="text-sm font-bold text-[#141518] group-hover:text-[#c1121f] transition-colors font-heading uppercase mb-2 tracking-wide">
+                <h3 className="text-sm font-bold text-[#141518] group-hover:text-[#eb2c1f] transition-colors font-heading uppercase mb-2 tracking-wide">
                   {val.word}
                 </h3>
 

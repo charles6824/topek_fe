@@ -48,33 +48,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, onRequestInfo }) =
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-4">
           {/* TOPEK Construction Brand Logo */}
-          <Link to="/" className="flex items-center gap-3 group select-none shrink-0">
-            {/* Structural Mark Tile */}
-            <div className="relative w-10 h-10 sm:w-11 sm:h-11 bg-[#0b1626] rounded-xs flex items-center justify-center border border-[#1e2a3a] shadow-xs group-hover:border-[#c1121f] transition-colors shrink-0">
-              {/* T monogram */}
-              <div className="relative w-5.5 h-5.5 flex flex-col items-center justify-center">
-                <div className="w-5.5 h-1.5 bg-white"></div>
-                <div className="w-1.5 h-4 bg-white"></div>
-                <div className="absolute top-0 right-0 w-1.5 h-1.5 bg-[#c1121f]"></div>
-              </div>
-            </div>
-
-            <div className="flex flex-col items-start leading-none">
-              <div className="flex items-baseline gap-1.5">
-                <span className="font-heading font-black text-2xl sm:text-[25px] tracking-tight text-[#0b1626]">
-                  TOPEK<span className="text-[#c1121f]">.</span>
-                </span>
-                <span className="text-[9px] sm:text-[10px] font-mono font-bold tracking-wider text-[#c1121f] uppercase -translate-y-1">
-                  RC 1946874
-                </span>
-              </div>
-              <span className="text-[9px] sm:text-[9.5px] font-extrabold tracking-[0.2em] text-[#1e293b] uppercase mt-0.5">
-                CONSTRUCTION LIMITED
-              </span>
-              <span className="text-[7.5px] sm:text-[8px] font-semibold text-[#64748b] tracking-[0.15em] uppercase">
-                CIVIL · EPC · INFRASTRUCTURE
-              </span>
-            </div>
+          <Link to="/" className="flex items-center gap-2.5 group select-none shrink-0 py-1">
+            <img
+              src="/logo.png"
+              alt="TOPEK Construction Limited"
+              className="h-9 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+            />
+            <span className="hidden sm:inline-block text-[9px] font-mono font-bold tracking-wider text-[#eb2c1f] uppercase bg-red-50/80 px-1.5 py-0.5 rounded-xs border border-red-200/80">
+              RC 1946874
+            </span>
           </Link>
 
           {/* Streamlined Desktop Navigation (6 Clean Items - Zero Wrapping) */}
@@ -94,8 +76,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, onRequestInfo }) =
                     to={item.path}
                     className={`flex items-center gap-1 px-2.5 xl:px-3 py-1.5 text-[12px] xl:text-[13px] font-bold uppercase tracking-wider transition-colors whitespace-nowrap relative ${
                       active
-                        ? 'text-[#c1121f] after:content-[""] after:absolute after:-bottom-1 after:left-2.5 after:right-2.5 after:h-[2px] after:bg-[#c1121f] after:rounded-full'
-                        : 'text-[#1e293b] hover:text-[#c1121f]'
+                        ? 'text-[#eb2c1f] after:content-[""] after:absolute after:-bottom-1 after:left-2.5 after:right-2.5 after:h-[2px] after:bg-[#eb2c1f] after:rounded-full'
+                        : 'text-[#1e293b] hover:text-[#eb2c1f]'
                     }`}
                   >
                     <span>{item.label}</span>
@@ -111,7 +93,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, onRequestInfo }) =
                   {/* Dropdown Menu */}
                   {hasChildren && activeDropdown === item.label && (
                     <div
-                      className={`absolute top-full left-0 bg-white border-t-2 border-[#c1121f] shadow-2xl rounded-xs py-3 px-4 z-50 animate-fade-in border border-gray-200 ${
+                      className={`absolute top-full left-0 bg-white border-t-2 border-[#eb2c1f] shadow-2xl rounded-xs py-3 px-4 z-50 animate-fade-in border border-gray-200 ${
                         item.columns && item.columns > 1
                           ? 'w-[560px] grid grid-cols-2 gap-x-6 gap-y-1'
                           : 'w-72 flex flex-col space-y-1'
@@ -121,7 +103,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, onRequestInfo }) =
                         <Link
                           key={sub.label}
                           to={sub.path}
-                          className="text-xs font-semibold text-[#1e293b] hover:text-[#c1121f] hover:translate-x-1 py-2 px-2.5 rounded-xs hover:bg-gray-50 transition-all block border-b border-gray-100 last:border-none"
+                          className="text-xs font-semibold text-[#1e293b] hover:text-[#eb2c1f] hover:translate-x-1 py-2 px-2.5 rounded-xs hover:bg-gray-50 transition-all block border-b border-gray-100 last:border-none"
                         >
                           {sub.label}
                         </Link>
@@ -136,7 +118,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, onRequestInfo }) =
             <button
               onClick={onOpenSearch}
               aria-label="Search website"
-              className="group/search p-2 text-[#1e293b] hover:text-[#c1121f] hover:bg-gray-100 rounded-md transition-colors ml-1 cursor-pointer"
+              className="group/search p-2 text-[#1e293b] hover:text-[#eb2c1f] hover:bg-gray-100 rounded-md transition-colors ml-1 cursor-pointer"
             >
               <MagnifyingGlass size={19} weight="bold" className="group-hover/search:scale-115 transition-transform duration-200" />
             </button>
@@ -144,7 +126,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, onRequestInfo }) =
             {/* Primary Action Button (Refined Deep Crimson) */}
             <button
               onClick={onRequestInfo}
-              className="group/btn ml-2 flex items-center gap-2 bg-[#c1121f] hover:bg-[#141518] text-white text-[11px] xl:text-[12px] font-bold tracking-wider uppercase px-4.5 py-2.5 rounded-md shadow-xs transition-colors cursor-pointer whitespace-nowrap"
+              className="group/btn ml-2 flex items-center gap-2 bg-[#eb2c1f] hover:bg-[#141518] text-white text-[11px] xl:text-[12px] font-bold tracking-wider uppercase px-4.5 py-2.5 rounded-md shadow-xs transition-colors cursor-pointer whitespace-nowrap"
             >
               <span>REQUEST A QUOTE</span>
               <ArrowRight size={14} weight="bold" className="group-hover/btn:translate-x-1 transition-transform duration-200" />
@@ -156,13 +138,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, onRequestInfo }) =
             <button
               onClick={onOpenSearch}
               aria-label="Search"
-              className="p-2 text-slate-700 hover:text-[#c1121f] rounded-lg hover:bg-slate-100"
+              className="p-2 text-slate-700 hover:text-[#eb2c1f] rounded-lg hover:bg-slate-100"
             >
               <MagnifyingGlass size={22} weight="bold" />
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-slate-800 hover:text-[#c1121f] focus:outline-none rounded-lg"
+              className="p-2 text-slate-800 hover:text-[#eb2c1f] focus:outline-none rounded-lg"
               aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? <X size={26} weight="bold" /> : <List size={26} weight="bold" />}
@@ -187,7 +169,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, onRequestInfo }) =
                       to={item.path}
                       onClick={() => !hasChildren && setMobileMenuOpen(false)}
                       className={`text-sm font-bold uppercase tracking-wider py-2 transition-colors ${
-                        active ? 'text-[#c1121f]' : 'text-slate-800'
+                        active ? 'text-[#eb2c1f]' : 'text-slate-800'
                       }`}
                     >
                       {item.label}
@@ -195,7 +177,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, onRequestInfo }) =
                     {hasChildren && (
                       <button
                         onClick={() => toggleMobileExpand(item.label)}
-                        className="p-2 text-slate-500 hover:text-[#c1121f]"
+                        className="p-2 text-slate-500 hover:text-[#eb2c1f]"
                         aria-label={`Expand ${item.label}`}
                       >
                         <CaretDown
@@ -208,13 +190,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, onRequestInfo }) =
                   </div>
 
                   {hasChildren && isExpanded && (
-                    <div className="pl-3 py-1 space-y-1 bg-gray-50 rounded-xs mb-2 border-l-2 border-[#c1121f]">
+                    <div className="pl-3 py-1 space-y-1 bg-gray-50 rounded-xs mb-2 border-l-2 border-[#eb2c1f]">
                       {item.children?.map((sub) => (
                         <Link
                           key={sub.label}
                           to={sub.path}
                           onClick={() => setMobileMenuOpen(false)}
-                          className="block py-1.5 text-xs text-slate-700 hover:text-[#c1121f] font-medium"
+                          className="block py-1.5 text-xs text-slate-700 hover:text-[#eb2c1f] font-medium"
                         >
                           {sub.label}
                         </Link>
@@ -231,7 +213,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, onRequestInfo }) =
                   setMobileMenuOpen(false);
                   onRequestInfo();
                 }}
-                className="w-full py-3 bg-[#c1121f] text-white text-xs font-bold tracking-wider uppercase rounded-md text-center flex items-center justify-center gap-2"
+                className="w-full py-3 bg-[#eb2c1f] text-white text-xs font-bold tracking-wider uppercase rounded-md text-center flex items-center justify-center gap-2"
               >
                 <span>REQUEST A QUOTE</span>
                 <ArrowRight size={15} weight="bold" />

@@ -15,14 +15,14 @@ import {
 import { DIVISIONS, type DivisionItem } from '../data/topekData';
 
 const divisionIconMap: Record<string, React.ReactNode> = {
-  Buildings: <Buildings size={24} weight="duotone" className="text-[#c1121f] group-hover:text-white transition-colors duration-300" />,
-  Compass: <Compass size={24} weight="duotone" className="text-[#c1121f] group-hover:text-white transition-colors duration-300" />,
-  Users: <Users size={24} weight="duotone" className="text-[#c1121f] group-hover:text-white transition-colors duration-300" />,
-  HouseLine: <HouseLine size={24} weight="duotone" className="text-[#c1121f] group-hover:text-white transition-colors duration-300" />,
-  Armchair: <Armchair size={24} weight="duotone" className="text-[#c1121f] group-hover:text-white transition-colors duration-300" />,
-  Package: <Package size={24} weight="duotone" className="text-[#c1121f] group-hover:text-white transition-colors duration-300" />,
-  Plant: <Plant size={24} weight="duotone" className="text-[#c1121f] group-hover:text-white transition-colors duration-300" />,
-  Truck: <Truck size={24} weight="duotone" className="text-[#c1121f] group-hover:text-white transition-colors duration-300" />,
+  Buildings: <Buildings size={24} weight="duotone" className="text-[#eb2c1f] group-hover:text-white transition-colors duration-300" />,
+  Compass: <Compass size={24} weight="duotone" className="text-[#eb2c1f] group-hover:text-white transition-colors duration-300" />,
+  Users: <Users size={24} weight="duotone" className="text-[#eb2c1f] group-hover:text-white transition-colors duration-300" />,
+  HouseLine: <HouseLine size={24} weight="duotone" className="text-[#eb2c1f] group-hover:text-white transition-colors duration-300" />,
+  Armchair: <Armchair size={24} weight="duotone" className="text-[#eb2c1f] group-hover:text-white transition-colors duration-300" />,
+  Package: <Package size={24} weight="duotone" className="text-[#eb2c1f] group-hover:text-white transition-colors duration-300" />,
+  Plant: <Plant size={24} weight="duotone" className="text-[#eb2c1f] group-hover:text-white transition-colors duration-300" />,
+  Truck: <Truck size={24} weight="duotone" className="text-[#eb2c1f] group-hover:text-white transition-colors duration-300" />,
 };
 
 interface ServicesSectionProps {
@@ -42,7 +42,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectDivisi
         {/* Section Header */}
         <div className="max-w-3xl mb-14 sm:mb-16">
           <div className="flex items-center gap-2 mb-3">
-            <div className="w-1.5 h-1.5 bg-[#c1121f]"></div>
+            <div className="w-1.5 h-1.5 bg-[#eb2c1f]"></div>
             <span className="font-mono text-[11px] font-semibold text-[#8a8d98] uppercase tracking-[0.2em]">
               Multidisciplinary Synergy · Vertical Integration
             </span>
@@ -50,7 +50,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectDivisi
           <h2 className="text-3xl sm:text-4xl font-black text-[#141518] uppercase font-heading tracking-tight leading-tight">
             8 INTEGRATED ENGINEERING DIVISIONS.
           </h2>
-          <div className="w-12 h-1 bg-[#c1121f] mt-4 mb-4"></div>
+          <div className="w-12 h-1 bg-[#eb2c1f] mt-4 mb-4"></div>
           <p className="text-sm sm:text-base text-[#555861] font-sans leading-relaxed">
             From high-tolerance reinforced civil foundations and cross-country gas pipelines to turnkey property development, bespoke interior fit-outs, and heavy machinery logistics.
           </p>
@@ -81,14 +81,14 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectDivisi
                   </div>
 
                   {/* Icon badge with interactive hover transition */}
-                  <div className="absolute bottom-3 right-3 w-10 h-10 bg-white/95 border border-white/40 group-hover:border-[#c1121f] group-hover:bg-[#c1121f] rounded-xs flex items-center justify-center shadow-xs group-hover:shadow-[0_8px_18px_-3px_rgba(193,18,31,0.5)] transform group-hover:scale-110 group-hover:-translate-y-0.5 transition-all duration-300">
-                    {divisionIconMap[div.icon] || <Buildings size={20} weight="bold" className="text-[#c1121f] group-hover:text-white transition-colors duration-300" />}
+                  <div className="absolute bottom-3 right-3 w-10 h-10 bg-white/95 border border-white/40 group-hover:border-[#eb2c1f] group-hover:bg-[#eb2c1f] rounded-xs flex items-center justify-center shadow-xs group-hover:shadow-[0_8px_18px_-3px_rgba(235,44,31,0.5)] transform group-hover:scale-110 group-hover:-translate-y-0.5 transition-all duration-300">
+                    {divisionIconMap[div.icon] || <Buildings size={20} weight="bold" className="text-[#eb2c1f] group-hover:text-white transition-colors duration-300" />}
                   </div>
                 </div>
 
                 {/* Content */}
                 <div className="p-5">
-                  <h3 className="text-base font-bold text-[#141518] group-hover:text-[#c1121f] transition-colors font-heading leading-snug line-clamp-2">
+                  <h3 className="text-base font-bold text-[#141518] group-hover:text-[#eb2c1f] transition-colors font-heading leading-snug line-clamp-2">
                     {div.title}
                   </h3>
                   <p className="text-[10px] font-mono font-semibold text-[#c27803] uppercase tracking-wider mt-1 mb-2.5 line-clamp-1">
@@ -102,7 +102,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectDivisi
                   <div className="space-y-1.5 pt-3 border-t border-[#f0eee6]">
                     {div.capabilities.slice(0, 2).map((cap, i) => (
                       <div key={i} className="flex items-center gap-2 text-[11px] text-[#4a4d56] font-medium">
-                        <CheckCircle size={13} weight="fill" className="text-[#c1121f] shrink-0 group-hover:scale-115 transition-transform duration-200" />
+                        <CheckCircle size={13} weight="fill" className="text-[#eb2c1f] shrink-0 group-hover:scale-115 transition-transform duration-200" />
                         <span className="truncate">{cap}</span>
                       </div>
                     ))}
@@ -111,7 +111,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectDivisi
               </div>
 
               {/* Card Footer Link */}
-              <div className="px-5 py-3 bg-[#faf9f6] border-t border-[#e5e4de] flex items-center justify-between text-xs font-bold text-[#141518] group-hover:text-[#c1121f] uppercase tracking-wider transition-colors">
+              <div className="px-5 py-3 bg-[#faf9f6] border-t border-[#e5e4de] flex items-center justify-between text-xs font-bold text-[#141518] group-hover:text-[#eb2c1f] uppercase tracking-wider transition-colors">
                 <Link to={div.link} className="flex items-center justify-between w-full">
                   <span>Explore Division</span>
                   <ArrowRight size={13} weight="bold" className="transform group-hover:translate-x-1.5 transition-transform duration-200" />
@@ -125,7 +125,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectDivisi
           <div className="mt-12 text-center">
             <Link
               to="/services"
-              className="group/btn inline-flex items-center gap-2 bg-[#141518] hover:bg-[#c1121f] text-white px-8 py-3.5 rounded-xs text-xs font-bold uppercase tracking-widest transition-colors shadow-xs"
+              className="group/btn inline-flex items-center gap-2 bg-[#141518] hover:bg-[#eb2c1f] text-white px-8 py-3.5 rounded-xs text-xs font-bold uppercase tracking-widest transition-colors shadow-xs"
             >
               <span>Explore All 8 Integrated Divisions</span>
               <ArrowRight size={14} weight="bold" className="transform group-hover/btn:translate-x-1.5 transition-transform duration-200" />

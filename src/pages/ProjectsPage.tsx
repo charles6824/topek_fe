@@ -87,7 +87,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 pb-6 border-b border-[#e5e4de]">
             <div>
               <div className="flex items-center gap-2 mb-2">
-                <div className="w-1.5 h-1.5 bg-[#c1121f]"></div>
+                <div className="w-1.5 h-1.5 bg-[#eb2c1f]"></div>
                 <span className="font-mono text-[11px] font-semibold text-[#8a8d98] uppercase tracking-[0.2em]">
                   Verified Infrastructure Portfolio · RC 1946874
                 </span>
@@ -124,7 +124,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
                     onClick={() => setCategoryFilter(c.key)}
                     className={`px-3 py-1.5 rounded-xs text-[11px] font-bold uppercase tracking-wider transition-colors cursor-pointer border ${
                       categoryFilter === c.key
-                        ? 'bg-[#c1121f] text-white border-[#c1121f]'
+                        ? 'bg-[#eb2c1f] text-white border-[#eb2c1f]'
                         : 'bg-white text-[#555861] border-[#e5e4de] hover:border-[#141518] hover:text-[#141518]'
                     }`}
                   >
@@ -158,7 +158,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
                   <div className="absolute top-3 inset-x-3 flex items-center justify-between z-10">
                     <span className={`px-2 py-0.5 rounded-xs text-[10px] font-mono font-bold uppercase tracking-wider shadow-xs ${
                       project.status === 'Ongoing'
-                        ? 'bg-[#c1121f] text-white'
+                        ? 'bg-[#eb2c1f] text-white'
                         : 'bg-[#141518] text-white border border-white/20'
                     }`}>
                       {project.status}
@@ -176,7 +176,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
                       Client: {project.client}
                     </span>
                     <p className="text-xs text-[#d4d4d8] flex items-center gap-1.5 mt-0.5">
-                      <MapPin size={12} weight="fill" className="text-[#c1121f] shrink-0" />
+                      <MapPin size={12} weight="fill" className="text-[#eb2c1f] shrink-0" />
                       <span className="truncate">{project.location}</span>
                     </p>
                   </div>
@@ -193,7 +193,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
                   <div>
                     <h3
                       onClick={() => onProjectSelect(project)}
-                      className="text-base font-bold text-[#1b2a4a] group-hover:text-[#c1121f] transition-colors leading-snug cursor-pointer font-montserrat line-clamp-2"
+                      className="text-base font-bold text-[#1b2a4a] group-hover:text-[#eb2c1f] transition-colors leading-snug cursor-pointer font-montserrat line-clamp-2"
                     >
                       {project.title}
                     </h3>
@@ -208,7 +208,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
                   <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
                     <button
                       onClick={() => onProjectSelect(project)}
-                      className="font-bold text-[#1b2a4a] hover:text-[#c1121f] uppercase tracking-wider inline-flex items-center gap-1 cursor-pointer"
+                      className="font-bold text-[#1b2a4a] hover:text-[#eb2c1f] uppercase tracking-wider inline-flex items-center gap-1 cursor-pointer"
                     >
                       <span>Project Details</span>
                       <ArrowRight size={13} weight="bold" />
@@ -216,7 +216,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
 
                     <button
                       onClick={() => onOpenContact(`Inquiry regarding project: ${project.title}`)}
-                      className="text-[#c1121f] hover:underline font-bold"
+                      className="text-[#eb2c1f] hover:underline font-bold"
                     >
                       RFQ Similar
                     </button>

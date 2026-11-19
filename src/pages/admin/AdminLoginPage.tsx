@@ -44,16 +44,13 @@ export const AdminLoginPage: React.FC = () => {
       <div className="relative z-10 w-full max-w-md">
         {/* Brand Header */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-xs bg-[#141518] border border-[#23252a] shadow-xl mb-3">
-            <div className="relative w-7 h-7 flex flex-col items-center justify-center">
-              <div className="w-7 h-1.5 bg-white"></div>
-              <div className="w-1.5 h-5.5 bg-white"></div>
-              <div className="absolute top-0 right-0 w-2 h-2 bg-[#c1121f]"></div>
-            </div>
-          </div>
-          <h1 className="text-2xl font-black text-white font-heading uppercase tracking-tight">
-            TOPEK <span className="text-[#c1121f]">CONSTRUCTION</span>
-          </h1>
+          <Link to="/" className="inline-block mb-3">
+            <img
+              src="/logo-white.png"
+              alt="TOPEK Construction Limited"
+              className="h-12 sm:h-14 w-auto object-contain mx-auto"
+            />
+          </Link>
           <p className="text-xs text-slate-400 font-mono tracking-wider uppercase mt-1">
             Executive Content Management Portal · RC 1946874
           </p>
@@ -62,7 +59,7 @@ export const AdminLoginPage: React.FC = () => {
         {/* Login Card */}
         <div className="bg-[#111927] border border-slate-800 rounded-xs p-7 sm:p-9 shadow-2xl backdrop-blur-md">
           <div className="flex items-center gap-2 mb-6 pb-4 border-b border-slate-800">
-            <ShieldCheck size={20} weight="fill" className="text-[#c1121f]" />
+            <ShieldCheck size={20} weight="fill" className="text-[#eb2c1f]" />
             <span className="text-xs font-mono font-bold uppercase tracking-wider text-slate-300">
               OWASP Hardened Authentication
             </span>
@@ -87,7 +84,7 @@ export const AdminLoginPage: React.FC = () => {
                   autoComplete="username"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full text-xs pl-10 pr-4 py-3 rounded-xs border border-slate-700 bg-[#0b1626] text-white focus:outline-none focus:border-[#c1121f]"
+                  className="w-full text-xs pl-10 pr-4 py-3 rounded-xs border border-slate-700 bg-[#0b1626] text-white focus:outline-none focus:border-[#eb2c1f]"
                   placeholder="admin@topekconstruction.com"
                 />
                 <EnvelopeSimple size={18} className="absolute left-3.5 top-3.5 text-slate-500" />
@@ -105,7 +102,7 @@ export const AdminLoginPage: React.FC = () => {
                   autoComplete="current-password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full text-xs pl-10 pr-10 py-3 rounded-xs border border-slate-700 bg-[#0b1626] text-white focus:outline-none focus:border-[#c1121f]"
+                  className="w-full text-xs pl-10 pr-10 py-3 rounded-xs border border-slate-700 bg-[#0b1626] text-white focus:outline-none focus:border-[#eb2c1f]"
                   placeholder="••••••••••••"
                 />
                 <LockKey size={18} className="absolute left-3.5 top-3.5 text-slate-500" />
@@ -124,7 +121,7 @@ export const AdminLoginPage: React.FC = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-[#c1121f] hover:bg-[#a00e19] text-white py-3.5 rounded-xs text-xs font-bold uppercase tracking-wider transition-colors shadow-md flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                className="w-full bg-[#eb2c1f] hover:bg-[#a00e19] text-white py-3.5 rounded-xs text-xs font-bold uppercase tracking-wider transition-colors shadow-md flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
               >
                 <span>{loading ? 'Authenticating Credentials...' : 'Sign In to Portal'}</span>
                 <ArrowRight size={15} weight="bold" />

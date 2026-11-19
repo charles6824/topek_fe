@@ -31,7 +31,7 @@ export const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
               <div className="relative w-4 h-4 flex flex-col items-center justify-center">
                 <div className="w-4 h-1 bg-white"></div>
                 <div className="w-1 h-3 bg-white"></div>
-                <div className="absolute top-0 right-0 w-1 h-1 bg-[#c1121f]"></div>
+                <div className="absolute top-0 right-0 w-1 h-1 bg-[#eb2c1f]"></div>
               </div>
             </div>
             <div>
@@ -74,7 +74,7 @@ export const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
             <div className="space-y-1.5 text-xs text-[#141518]">
               {division.capabilities.map((cap, i) => (
                 <div key={i} className="flex items-center gap-2">
-                  <CheckCircle size={14} weight="fill" className="text-[#c1121f] shrink-0" />
+                  <CheckCircle size={14} weight="fill" className="text-[#eb2c1f] shrink-0" />
                   <span>{cap}</span>
                 </div>
               ))}
@@ -93,7 +93,7 @@ export const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
                 onClose();
                 onRequestQuote(division.title);
               }}
-              className="inline-flex items-center gap-1.5 bg-[#c1121f] hover:bg-[#141518] text-white px-5 py-2.5 rounded-xs text-xs font-bold uppercase tracking-widest transition-colors shadow-2xs cursor-pointer"
+              className="inline-flex items-center gap-1.5 bg-[#eb2c1f] hover:bg-[#141518] text-white px-5 py-2.5 rounded-xs text-xs font-bold uppercase tracking-widest transition-colors shadow-2xs cursor-pointer"
             >
               <span>Request RFQ for Division</span>
               <ArrowRight size={14} weight="bold" />

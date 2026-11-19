@@ -46,7 +46,7 @@ export const QualityPolicyPage: React.FC<QualityPolicyPageProps> = ({ onOpenCont
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-16">
             <div className="lg:col-span-7 space-y-6">
               <div className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 bg-[#c1121f]"></div>
+                <div className="w-1.5 h-1.5 bg-[#eb2c1f]"></div>
                 <span className="font-mono text-[11px] font-semibold text-[#8a8d98] uppercase tracking-[0.2em]">
                   Quality Assurance Framework
                 </span>
@@ -54,9 +54,9 @@ export const QualityPolicyPage: React.FC<QualityPolicyPageProps> = ({ onOpenCont
               <h2 className="text-3xl sm:text-4xl font-black uppercase text-[#141518] font-heading tracking-tight leading-tight">
                 DOING IT RIGHT THE FIRST TIME, EVERY TIME.
               </h2>
-              <div className="w-12 h-1 bg-[#c1121f]"></div>
+              <div className="w-12 h-1 bg-[#eb2c1f]"></div>
 
-              <div className="border-l-2 border-[#c1121f] pl-4 py-2 italic text-[#141518] text-xs sm:text-sm md:text-base leading-relaxed bg-[#f5f4f0] rounded-xs font-sans">
+              <div className="border-l-2 border-[#eb2c1f] pl-4 py-2 italic text-[#141518] text-xs sm:text-sm md:text-base leading-relaxed bg-[#f5f4f0] rounded-xs font-sans">
                 "TOPEK Construction Limited is firmly committed to delivering civil, structural, mechanical, and infrastructural projects that consistently meet or exceed our clients’ technical requirements and statutory engineering codes."
               </div>
 
@@ -66,7 +66,7 @@ export const QualityPolicyPage: React.FC<QualityPolicyPageProps> = ({ onOpenCont
 
               <div className="flex flex-wrap gap-3 pt-2">
                 <span className="inline-flex items-center gap-2 bg-white text-[#141518] px-3.5 py-2 rounded-xs border border-[#e5e4de] text-xs font-mono font-bold">
-                  <Certificate size={16} weight="bold" className="text-[#c1121f]" />
+                  <Certificate size={16} weight="bold" className="text-[#eb2c1f]" />
                   ISO 9001:2015 CERTIFIED
                 </span>
                 <span className="inline-flex items-center gap-2 bg-white text-[#141518] px-3.5 py-2 rounded-xs border border-[#e5e4de] text-xs font-mono font-bold">
@@ -89,19 +89,19 @@ export const QualityPolicyPage: React.FC<QualityPolicyPageProps> = ({ onOpenCont
 
                 <ul className="space-y-3.5 text-xs sm:text-sm text-[#a1a1aa] font-sans">
                   <li className="flex items-start gap-2.5">
-                    <CheckCircle size={16} weight="fill" className="text-[#c1121f] shrink-0 mt-0.5" />
+                    <CheckCircle size={16} weight="fill" className="text-[#eb2c1f] shrink-0 mt-0.5" />
                     <span>Deliver 100% defect-free welded joints verified via calibrated NDT testing.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
-                    <CheckCircle size={16} weight="fill" className="text-[#c1121f] shrink-0 mt-0.5" />
+                    <CheckCircle size={16} weight="fill" className="text-[#eb2c1f] shrink-0 mt-0.5" />
                     <span>Eliminate rework and material wastage through constructability reviews.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
-                    <CheckCircle size={16} weight="fill" className="text-[#c1121f] shrink-0 mt-0.5" />
+                    <CheckCircle size={16} weight="fill" className="text-[#eb2c1f] shrink-0 mt-0.5" />
                     <span>Ensure 100% calibration traceability for all measurement instruments.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
-                    <CheckCircle size={16} weight="fill" className="text-[#c1121f] shrink-0 mt-0.5" />
+                    <CheckCircle size={16} weight="fill" className="text-[#eb2c1f] shrink-0 mt-0.5" />
                     <span>Achieve full pre-commissioning readiness and prompt milestone sign-offs.</span>
                   </li>
                 </ul>
@@ -116,7 +116,7 @@ export const QualityPolicyPage: React.FC<QualityPolicyPageProps> = ({ onOpenCont
                 key={idx}
                 className="bg-white p-6 rounded-xs border border-[#e5e4de] shadow-2xs hover:border-[#141518] transition-all space-y-3"
               >
-                <div className="font-mono text-xs font-bold text-[#c1121f]">
+                <div className="font-mono text-xs font-bold text-[#eb2c1f]">
                   0{idx + 1} //
                 </div>
                 <h4 className="text-sm font-black text-[#141518] font-heading uppercase">

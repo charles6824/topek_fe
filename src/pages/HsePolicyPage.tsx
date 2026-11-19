@@ -54,7 +54,7 @@ export const HsePolicyPage: React.FC<HsePolicyPageProps> = ({ onOpenContact }) =
           {/* Main Statement */}
           <div className="max-w-3xl mb-16">
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-1.5 h-1.5 bg-[#c1121f]"></div>
+              <div className="w-1.5 h-1.5 bg-[#eb2c1f]"></div>
               <span className="font-mono text-[11px] font-semibold text-[#8a8d98] uppercase tracking-[0.2em]">
                 Statutory HSE Mandate
               </span>
@@ -62,7 +62,7 @@ export const HsePolicyPage: React.FC<HsePolicyPageProps> = ({ onOpenContact }) =
             <h2 className="text-3xl sm:text-4xl font-black uppercase text-[#141518] font-heading tracking-tight leading-tight">
               SAFETY IS AN INTEGRAL ENGINEERING DISCIPLINE.
             </h2>
-            <div className="w-12 h-1 bg-[#c1121f] mt-4 mb-4"></div>
+            <div className="w-12 h-1 bg-[#eb2c1f] mt-4 mb-4"></div>
             <p className="text-sm sm:text-base text-[#555861] leading-relaxed font-sans">
               It is the primary policy of TOPEK Construction Limited to execute all construction, heavy civil, pipeline installation, and project management operations ensuring that the health, safety, and welfare of our workforce, host communities, and stakeholders are safeguarded without exception.
             </p>
@@ -71,7 +71,7 @@ export const HsePolicyPage: React.FC<HsePolicyPageProps> = ({ onOpenContact }) =
           {/* 3 Core HSE Pillars */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-16">
             <div className="bg-[#141518] text-white p-8 rounded-xs border border-[#23252a] shadow-md space-y-4">
-              <div className="w-12 h-12 rounded-xs bg-[#1e2025] border border-[#2e3138] flex items-center justify-center text-[#c1121f]">
+              <div className="w-12 h-12 rounded-xs bg-[#1e2025] border border-[#2e3138] flex items-center justify-center text-[#eb2c1f]">
                 <Heartbeat size={28} weight="bold" />
               </div>
               <div className="space-y-1">
@@ -85,7 +85,7 @@ export const HsePolicyPage: React.FC<HsePolicyPageProps> = ({ onOpenContact }) =
               </p>
             </div>
 
-            <div className="bg-[#c1121f] text-white p-8 rounded-xs shadow-md space-y-4">
+            <div className="bg-[#eb2c1f] text-white p-8 rounded-xs shadow-md space-y-4">
               <div className="w-12 h-12 rounded-xs bg-[#9f0e19] flex items-center justify-center text-white">
                 <ShieldCheck size={28} weight="bold" />
               </div>
@@ -120,7 +120,7 @@ export const HsePolicyPage: React.FC<HsePolicyPageProps> = ({ onOpenContact }) =
           <div className="border border-[#e5e4de] rounded-xs p-7 sm:p-10 bg-white shadow-2xs">
             <div className="max-w-2xl mb-8">
               <div className="flex items-center gap-2 mb-2">
-                <Warning size={16} className="text-[#c1121f]" weight="bold" />
+                <Warning size={16} className="text-[#eb2c1f]" weight="bold" />
                 <span className="font-mono text-[11px] font-semibold text-[#8a8d98] uppercase tracking-widest">
                   Standard Operating Procedures
                 </span>
@@ -134,7 +134,7 @@ export const HsePolicyPage: React.FC<HsePolicyPageProps> = ({ onOpenContact }) =
               {policyRules.map((rule, idx) => (
                 <div key={idx} className="bg-[#faf9f6] p-6 rounded-xs border border-[#e5e4de] space-y-2">
                   <div className="flex items-center gap-2 text-xs font-black uppercase text-[#141518] font-heading">
-                    <CheckCircle size={16} weight="fill" className="text-[#c1121f] shrink-0" />
+                    <CheckCircle size={16} weight="fill" className="text-[#eb2c1f] shrink-0" />
                     <span>{rule.title}</span>
                   </div>
                   <p className="text-xs sm:text-sm text-[#5f636e] leading-relaxed font-sans">
