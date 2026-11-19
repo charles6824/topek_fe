@@ -24,7 +24,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, onRequestInfo }) =
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -39,10 +40,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, onRequestInfo }) =
 
   return (
     <header
-      className={`sticky top-0 z-40 bg-white transition-all duration-300 ${
+      className={`sticky top-0 z-40 w-full transition-all duration-300 ${
         isScrolled
-          ? 'shadow-sm py-2.5 bg-white/98 backdrop-blur-md border-b border-gray-200'
-          : 'border-b border-gray-200/80 py-3 sm:py-3.5'
+          ? 'shadow-md py-2.5 bg-white/95 backdrop-blur-md border-b border-gray-200'
+          : 'border-b border-gray-200/80 py-3 sm:py-3.5 bg-white'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
