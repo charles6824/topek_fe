@@ -97,7 +97,7 @@ export const COMPANY_INFO = {
     'ENVIRONMENTAL CONSERVATION: Minimize carbon and ecological footprints via modern low-emission fleet and green construction methodologies.'
   ],
   coreValues: [
-    { letter: 'T', word: 'Teamwork', detail: 'Multidisciplinary synergy across civil, mechanical, structural, and architectural crafts.' },
+    { letter: 'T', word: 'Teamwork', detail: 'Build strong synergy across civil, mechanical, structural, and architectural crafts.' },
     { letter: 'O', word: 'Optimism & Agility', detail: 'Resourceful problem solving and proactive mobilization across any Nigerian terrain.' },
     { letter: 'P', word: 'Probity', detail: 'Rigorous corporate governance, open-book cost engineering, and absolute integrity.' },
     { letter: 'E', word: 'Excellence', detail: 'High-tolerance structural execution, millimetre survey accuracy, and aesthetic prestige.' },
